@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/media/krylot/01D0F73078FA39E0/Projects/GITHUB/kyhuuhai/CDIO4/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1017085441.index
+3305560004.index
+1578844084.index
+4006040546.index
+2646949252.index
+4159104035.index
