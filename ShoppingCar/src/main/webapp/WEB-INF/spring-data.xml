@@ -25,7 +25,7 @@
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- This makes /META-INF/persistence.xml is no longer necessary -->
-		<property name="packagesToScan" value="guru.tour.entity" />
+		<property name="packagesToScan" value="duytan.edu.entity" />
 		<!-- JpaVendorAdapter implementation for Hibernate EntityManager. Exposes 
 			Hibernate's persistence provider and EntityManager extension interface -->
 		<property name="jpaVendorAdapter">
