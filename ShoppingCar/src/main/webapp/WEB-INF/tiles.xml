@@ -13,5 +13,7 @@
 	<definition name="home" extends="definition">
 		<put-attribute name="body" value="/views/user/home.jsp" />
 	</definition>
-
+	<definition name="employee" extends="definition">
+		<put-attribute name="body" value="/views/user/employee.jsp" />
+	</definition>
 </tiles-definitions>

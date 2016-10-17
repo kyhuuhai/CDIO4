@@ -58,6 +58,6 @@
 	</bean>
 
 	<!-- Json support -->
-	<!-- <import resource="classpath:/spring-data.xml" /> -->
+	<import resource="classpath:/spring-data.xml" />
 	<!-- <import resource="spring-security.xml" /> -->
 </beans>
