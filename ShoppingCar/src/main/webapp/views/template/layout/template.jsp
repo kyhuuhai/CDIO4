@@ -5,7 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Tour</title>
+
+<script src="resource/js/jquery.js"></script>
+<script src="resource/js/price-range.js"></script>
+<script src="resource/js/jquery.scrollUp.min.js"></script>
+<script src="resource/js/bootstrap.min.js"></script>
+<script src="resource/js/bootstrap.js"></script>
+<link href="resource/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body >
 	<table width="100%">
