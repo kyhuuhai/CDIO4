@@ -16,4 +16,10 @@
 	<definition name="employee" extends="definition">
 		<put-attribute name="body" value="/views/user/employee.jsp" />
 	</definition>
+	<definition name="login" extends="definition">
+		<put-attribute name="body" value="/views/user/form-login.jsp" />
+	</definition>
+	<definition name="register" extends="definition">
+		<put-attribute name="body" value="/views/user/form-register.jsp" />
+	</definition>
 </tiles-definitions>

@@ -1,0 +1,52 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<http use-expressions="true" auto-config="false">
+		<csrf disabled="true" />
+		<!-- <intercept-url pattern="/*" access="isAuthenticated() " /> -->
+		<intercept-url pattern="/home" access="permitAll()" />
+		<intercept-url pattern="/login" access="permitAll()" />
+		<intercept-url pattern="/register" access="permitAll()" />
+		<access-denied-handler error-page="/403" />
+
+		<form-login login-page='/login' login-processing-url="/j_spring_security_check"
+			username-parameter="username" password-parameter="password"
+			authentication-success-handler-ref="loginSuccessHandler"
+			authentication-failure-handler-ref="loginFailureHandler"
+			always-use-default-target="false" />
+
+            <logout logout-url="/logout" logout-success-url="/home"></logout>
+ 
+    </http>
+
+
+
+
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="UserServiceImpl">
+			<password-encoder ref="encoder" />
+		</authentication-provider>
+	</authentication-manager>
+
+
+	<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<beans:constructor-arg name="strength" value="10" />
+	</beans:bean>
+	
+	<beans:bean id="UserServiceImpl"
+	class="duytan.edu.user.UserServiceImpl">
+	</beans:bean>
+	
+		<beans:bean id="loginSuccessHandler" class="duytan.edu.security.LoginSuccessHandler">
+			<beans:property name="defaultTargetUrl" value="/home"></beans:property>
+		</beans:bean>
+		<beans:bean id="loginFailureHandler" class="duytan.edu.security.LoginFailureHandler">
+			<beans:property name="defaultFailureUrl" value="/login" />
+		</beans:bean>
+
+</beans:beans>
