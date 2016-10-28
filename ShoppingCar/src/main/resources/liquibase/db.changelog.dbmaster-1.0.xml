@@ -79,7 +79,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
                 <constraints nullable="false"/>
             </column>
             <column name="username" type="VARCHAR(45)"/>
-            <column name="password" type="VARCHAR(45)"/>
+            <column name="password" type="VARCHAR(120)"/>
         </createTable>
     </changeSet>
     <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-9">
