@@ -4,7 +4,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
 logicalFilePath="db.changelog.dbmaster-1.0.xml">
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-1">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-1">
         <createTable tableName="cthoadon">
             <column name="idcthoadon" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -14,7 +14,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="id_hoadon" type="VARCHAR(36)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-2">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-2">
         <createTable tableName="hoadon">
             <column name="idhoadon" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -24,7 +24,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="iduser" type="VARCHAR(36)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-3">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-3">
         <createTable tableName="khachhang">
             <column name="idkhachhang" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -35,7 +35,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="sdt" type="INT"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-4">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-4">
         <createTable tableName="loaisp">
             <column name="idloaisp" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -43,7 +43,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="ten_loaisp" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-5">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-5">
         <createTable tableName="roles">
             <column name="idroles" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -51,7 +51,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="name_roles" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-6">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-6">
         <createTable tableName="sanpham">
             <column name="idsanpham" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -63,7 +63,7 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="id_thuonghieu" type="VARCHAR(36)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-7">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-7">
         <createTable tableName="thuonghieu">
             <column name="idthuonghieu" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -73,16 +73,20 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="hinhanh" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-8">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-8">
         <createTable tableName="user">
             <column name="iduser" type="VARCHAR(36)">
                 <constraints nullable="false"/>
             </column>
-            <column name="username" type="VARCHAR(45)"/>
-            <column name="password" type="VARCHAR(120)"/>
+            <column name="username" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(120)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-9">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-9">
         <createTable tableName="user_roles">
             <column name="iduser_roles" type="VARCHAR(36)">
                 <constraints nullable="false"/>
@@ -92,120 +96,93 @@ logicalFilePath="db.changelog.dbmaster-1.0.xml">
             <column name="iduser" type="VARCHAR(36)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-10">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-10">
         <addPrimaryKey columnNames="idcthoadon" constraintName="PRIMARY" tableName="cthoadon"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-11">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-11">
         <addPrimaryKey columnNames="idhoadon" constraintName="PRIMARY" tableName="hoadon"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-12">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-12">
         <addPrimaryKey columnNames="idkhachhang" constraintName="PRIMARY" tableName="khachhang"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-13">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-13">
         <addPrimaryKey columnNames="idloaisp" constraintName="PRIMARY" tableName="loaisp"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-14">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-14">
         <addPrimaryKey columnNames="idroles" constraintName="PRIMARY" tableName="roles"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-15">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-15">
         <addPrimaryKey columnNames="idsanpham" constraintName="PRIMARY" tableName="sanpham"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-16">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-16">
         <addPrimaryKey columnNames="idthuonghieu" constraintName="PRIMARY" tableName="thuonghieu"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-17">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-17">
         <addPrimaryKey columnNames="iduser" constraintName="PRIMARY" tableName="user"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-18">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-18">
         <addPrimaryKey columnNames="iduser_roles" constraintName="PRIMARY" tableName="user_roles"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-19">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-19">
+        <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="user"/>
+    </changeSet>
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-20">
         <createIndex indexName="a_idx" tableName="cthoadon">
             <column name="id_hoadon"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-20">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-21">
         <createIndex indexName="b_idx" tableName="cthoadon">
             <column name="id_sp"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-21">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-22">
         <createIndex indexName="c_idx" tableName="hoadon">
             <column name="iduser"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-22">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-23">
         <createIndex indexName="i_idx" tableName="user_roles">
             <column name="iduser"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-23">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-24">
         <createIndex indexName="k_idx" tableName="user_roles">
             <column name="idroles"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-24">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-25">
         <createIndex indexName="r_idx" tableName="sanpham">
             <column name="id_loaisp"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-25">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-26">
         <createIndex indexName="v_idx" tableName="sanpham">
             <column name="id_thuonghieu"/>
         </createIndex>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-26">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-27">
+        <addForeignKeyConstraint baseColumnNames="id_sp" baseTableName="cthoadon" constraintName="als" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idsanpham" referencedTableName="sanpham"/>
+    </changeSet>
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-28">
         <addForeignKeyConstraint baseColumnNames="idkhachhang" baseTableName="khachhang" constraintName="h" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="iduser" referencedTableName="user"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-27">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-29">
         <addForeignKeyConstraint baseColumnNames="iduser" baseTableName="user_roles" constraintName="i" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="iduser" referencedTableName="user"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-28">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-30">
         <addForeignKeyConstraint baseColumnNames="idroles" baseTableName="user_roles" constraintName="k" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idroles" referencedTableName="roles"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-29">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-31">
+        <addForeignKeyConstraint baseColumnNames="id_hoadon" baseTableName="cthoadon" constraintName="lkj" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idhoadon" referencedTableName="hoadon"/>
+    </changeSet>
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-32">
+        <addForeignKeyConstraint baseColumnNames="iduser" baseTableName="hoadon" constraintName="ll" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="iduser" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-33">
         <addForeignKeyConstraint baseColumnNames="id_loaisp" baseTableName="sanpham" constraintName="r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idloaisp" referencedTableName="loaisp"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-30">
+    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477648334049-34">
         <addForeignKeyConstraint baseColumnNames="id_thuonghieu" baseTableName="sanpham" constraintName="v" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idthuonghieu" referencedTableName="thuonghieu"/>
     </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-31">
-        <dropForeignKeyConstraint baseTableName="model" constraintName="e"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-32">
-        <dropForeignKeyConstraint baseTableName="feature" constraintName="n"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-33">
-        <dropForeignKeyConstraint baseTableName="feandcar" constraintName="z"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-34">
-        <dropTable tableName="car"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-35">
-        <dropTable tableName="feandcar"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-36">
-        <dropTable tableName="feature"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-37">
-        <dropTable tableName="feature_type"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-38">
-        <dropTable tableName="make"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-39">
-        <dropTable tableName="model"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-40">
-        <dropForeignKeyConstraint baseTableName="cthoadon" constraintName="a"/>
-        <addForeignKeyConstraint baseColumnNames="id_hoadon" baseTableName="cthoadon" constraintName="a" referencedColumnNames="idhoadon" referencedTableName="hoadon"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-41">
-        <dropForeignKeyConstraint baseTableName="cthoadon" constraintName="b"/>
-        <addForeignKeyConstraint baseColumnNames="id_sp" baseTableName="cthoadon" constraintName="b" referencedColumnNames="idsanpham" referencedTableName="sanpham"/>
-    </changeSet>
-    <changeSet author="Nguyễn Hữu Phúc (generated)" id="1477642085474-42">
-        <dropForeignKeyConstraint baseTableName="hoadon" constraintName="c"/>
-        <addForeignKeyConstraint baseColumnNames="iduser" baseTableName="hoadon" constraintName="c" referencedColumnNames="iduser" referencedTableName="user"/>
-    </changeSet>
-</databaseChangeLog>
+    </databaseChangeLog>
