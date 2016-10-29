@@ -22,4 +22,8 @@
 	<definition name="register" extends="definition">
 		<put-attribute name="body" value="/views/user/form-register.jsp" />
 	</definition>
+	<definition name="index" extends="definition">
+		<put-attribute name="body" value="/views/user/index.jsp" />
+	</definition>
+	
 </tiles-definitions>
