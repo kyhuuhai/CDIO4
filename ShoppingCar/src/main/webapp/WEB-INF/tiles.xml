@@ -22,8 +22,34 @@
 	<definition name="register" extends="definition">
 		<put-attribute name="body" value="/views/user/form-register.jsp" />
 	</definition>
-	<definition name="index" extends="definition">
+	<definition name="product" extends="definition">
+		<put-attribute name="title" value="product" />
 		<put-attribute name="body" value="/views/user/index.jsp" />
 	</definition>
+
+	<definition name="product" extends="definition">
+		<put-attribute name="title" value="listproduct" />
+		<put-attribute name="body" value="/views/user/product.jsp" />
+	</definition>
 	
+	<definition name="productlocation" extends="definition">
+		<put-attribute name="title" value="Home Page" /> 
+		<put-attribute name="body" value="/views/user/productlocation.jsp" />
+	</definition>
+ <definition name="productsup" extends="definition">
+		<put-attribute name="title" value="Postproduct" />
+		<put-attribute name="body" value="/views/user/productsup.jsp" />
+	</definition>			
+<definition name="product-detail" extends="definition">
+		<put-attribute name="title" value="producDetails Page" /> 
+		<put-attribute name="body" value="/views/user/product-detail.jsp" />
+</definition>
+<definition name="index" extends="definition">
+		<put-attribute name="title" value="producDetails Page" /> 
+		<put-attribute name="body" value="/views/user/index.jsp" />
+</definition>
+	<definition name="phonecart" extends="definition">
+		<put-attribute name="title" value="producDetails Page" /> 
+		<put-attribute name="body" value="/views/user/phonecart.jsp" />
+</definition>
 </tiles-definitions>

@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -14,14 +15,14 @@ import javax.persistence.Table;
 public class LoaiSPEntity {
 
 	@Id
+	@Column(name="idloaisp")
 	private String id = UUID.randomUUID().toString();
 	
 	@Column(name="ten_loaisp")
 	private String tenloai;
 
-	@OneToMany(mappedBy="loaisp")
+	@OneToMany(mappedBy="loaiSPEntity")
 	private List<SanPhamEntity> sanpham;
-	
 	
 	public List<SanPhamEntity> getSanpham() {
 		return sanpham;

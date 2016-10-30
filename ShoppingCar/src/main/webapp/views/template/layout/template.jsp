@@ -1,43 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!doctype html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Shopping Car</title>
+<title><tiles:getAsString name="title" /></title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="resource/js/jquery.js"></script>
-<script src="resource/js/bootstrap.min.js"></script>
-<script src="resource/js/bootstrap.js"></script>
-<link href="resource/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-	
-    <link href="resource/css/prettyPhoto.css" rel="stylesheet">
-    <link href="resource/css/responsive.css" rel="stylesheet">
-    <link href="resource/css/font-awesome.min.css" rel="stylesheet">
-	<link href="resource/css/css.css" rel="stylesheet">
-	<script src="resource/js/jquery-3.1.1.js"></script>
-	<script src="resource/js/jquery-3.1.1.min.js"></script>
-       <link rel="stylesheet" href="resource/css/font-awesome.min.css">
+<title>Phone Market</title>
+<link href="resource/css/bootstrap.min.css" rel="stylesheet">
+<link href="resource/css/prettyPhoto.css" rel="stylesheet">
+<link href="resource/css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="resource/css/font-awesome.min.css">
+<link href="resource/css/css.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-	<style>
-	h4{
-   font-family: -webkit-pictograph;
-	}
-	</style>
 </head>
-<body >
-	<table width="100%">
-		<tr>
-			<td colspan="2"><tiles:insertAttribute name="header" /></td>
-		</tr>
-		<tr>
-			<td width="80%"><tiles:insertAttribute name="body" /></td>
-		</tr>
-		<tr>
-			<td colspan="2"><tiles:insertAttribute name="footer" /></td>
-		</tr>
-	</table>
+<body>
+	<header>
+		<tiles:insertAttribute name="header"></tiles:insertAttribute>
+	</header>
+	<tiles:insertAttribute name="body"></tiles:insertAttribute>
+	<footer>
+		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
+	</footer>
 </body>
+<script src="resource/jquerry/jquery-3.1.1.js"></script>
+<script src="resource/jquerry/jquery-3.1.1.min.js"></script>
+<script src="resource/js/bootstrap.min.js"></script>
 </html>

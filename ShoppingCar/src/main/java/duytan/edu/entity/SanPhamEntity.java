@@ -14,6 +14,7 @@ import javax.persistence.Table;
 public class SanPhamEntity {
 
 	@Id
+	@Column(name="idsanpham")
 	private String id = UUID.randomUUID().toString();
 	
 	@Column(name="tensp")
@@ -26,11 +27,11 @@ public class SanPhamEntity {
 	private String hinhanh;
 	
 	@ManyToOne
-	@JoinColumn(name="idthuonghieu")
+	@JoinColumn(name="id_thuonghieu")
 	private ThuongHieuEntity thuongHieuEntity;
 	
 	@ManyToOne
-	@JoinColumn(name="idloaisp")
+	@JoinColumn(name="id_loaisp")
 	private LoaiSPEntity loaiSPEntity;
 
 	public String getId() {
@@ -89,6 +90,10 @@ public class SanPhamEntity {
 		this.hinhanh = hinhanh;
 		this.thuongHieuEntity = thuongHieuEntity;
 		this.loaiSPEntity = loaiSPEntity;
+	}
+
+	public SanPhamEntity() {
+		super();
 	}
 	
 	

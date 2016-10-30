@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="UTF-8"%>
-
-<body>
-	<header id="header">
-		<div id="header_top">
+ <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+          <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<div id="header_top">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-md-6">
 						<div class="contact-account">
 							<ul class="nav nav-pills">
 							<li class="email">
@@ -21,46 +20,53 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-md-6">
 						<div class="menu-acount pull-right">
-							<ul class="nav nav-pills">
+							<ul class="nav nav-pills account-cust">
 								<li>
-									<a href="/login" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>LOGIN</a>
-                   
+									<a href="${pageContext.request.contextPath }/login"><span class="glyphicon glyphicon-user">
+									
+									</span>LOGIN</a>
+    
 								</li>
 								<li>
-										<a href="/signup" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i><span>SIGN UP</span></a>
-                               
+										<a href="${pageContext.request.contextPath }/addorder"><i class="glyphicon glyphicon-user"></i><span>SIGN UP</span></a>
+
+								</li>
+									<li>
+										<a href="${pageContext.request.contextPath }/viewcart"><i class="glyphicon glyphicon-shopping-cart"></i><span>CART</span></a>
+
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="header_middle">
+			</div>
+	<div class="header_middle">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<div class="logo pull-left">
-							<a href="home.html"><img src="resource/images/12809732_240534996295136_3756555531503538654_n.png" style="width:100px;height:50px;margin-top:-20px"></a>
+							<a href="${pageContext.request.contextPath }/home"></a>
 						</div>
 					</div>
 					<div class="col-sm-6">
             <div id="custom-search-input">
+			<form action="search" method="POST">
                 <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="Nhập Sản Phẩm" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
+                    <input type="text" class="form-control input-lg" name="name" style="    font-family: -webkit-pictograph;"/>
+                    <span class="input-group-btn  search-button">
+                        <button  class="btn btn-info search-button btn-lg" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </span>
                 </div>
+                </form>
+
             </div>
         </div>
+     
 					</div>
 				</div>
         </div>
-    </header>
-<p><br/></p>
-</body>

@@ -1,10 +1,71 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-          <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
           <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
-<body>
-	
-    
+                 <section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+				<c:forEach var="event" items="${event }">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
+									<button type="button" class="btn btn-default get">Chi tiết</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="resource/img/${event.image }" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+							<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
+									<button type="button" class="btn btn-default get">Chi tiết</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="resource/img/${event.image1 }" class="girl img-responsive" alt="" />
+									
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
+									<button type="button" class="btn btn-default get">Chi tiết</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="resource/img/${event.image2 }" class="girl img-responsive" alt="" />
+					
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="glyphicon glyphicon-menu-left s-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="glyphicon glyphicon-menu-right s-right"></i>
+						</a>
+					</div>
+					</c:forEach>
+				</div>
+			</div>
+		</div>
+	</section>
 <div class="container-fluid">
     <div class="row">
         <div class="container content">
@@ -12,16 +73,16 @@
                     <div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>DANH MỤC</h3>  
-                    	  <c:forEach var="loaisp" items="${danhmuc }">
-								<li><a href="${pageContext.request.contextPath }/${loaisp.tenloai}">${loaisp.tenloai }</a></li>
+                    	  <c:forEach var="category" items="${Lcate }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/cate?idcategory=${category.idcategory}">${category.name }</a></li>
 								</c:forEach>					
 					</div>
                         </div>                        
 					<div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>HÃNG SẢN XUẤT</h3>   
-                    	  <c:forEach var="thuonghieu" items="${HangSanXuat }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/supply?id=${thuonghieu.id}">${thuonghieu.name }</a></li>
+                    	  <c:forEach var="supplier" items="${Lsup }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/supply?idsupplier=${supplier.idsupplier}">${supplier.name }</a></li>
 								</c:forEach>						
 					</div>
                         </div>    
@@ -75,25 +136,26 @@
                     </div>
                     <p><br/></p>
                    <div class="list-product">
-				<c:forEach var="sanpham" items="${Lproduct }" varStatus="status">
-             <div class="col-sm-4">
+				<c:forEach var="phone" items="${Lproduct }" varStatus="status">
+             <div class="col-sm-3">
             		<div class="product-box">
-                        <img src="<%=request.getContextPath() %>/resource/images/${image}">
+                        <img src="<%=request.getContextPath() %>/resource/img/${phone.image}">
                         <div class="product-detail">
-                            <a href="${pageContext.request.contextPath }/detail?id=${sanpham.id}" class="btn btn-default detail">XEM CHI TIẾT</a>
+                            <a href="${pageContext.request.contextPath }/detail?idproduct=${phone.idproduct}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>
-                          <h3>${sanpham.name}</h3>
-                         <p>Giá:${price }3000000</p>
-                            <h4>Lượt view:${view}250</h4>
-                            <h4>Khu vực:${phone.locat.name}Da Nang</p>
-                            <h4>Địa Chỉ: ${sanpham.diachi }
+                   <!--      <div class="descrip-product"> -->
+                          <h3>${phone.name}</h3>
+                         <p>Giá:${phone.price }</p>
+                            <%-- <h4>Lượt view:${phone.view}</h4> --%>
+                            <h4>Khu vực:${phone.locat.name}</h4>
+                     <!--        </div> -->
                     </div>
                     
                          </div>
                       </c:forEach>
                     </div>
                     <p><br/></p>
-                    <c:url value="/page/" var="page"></c:url>
+                    <c:url value="/" var="page"></c:url>
                     <ul class="pagination" style="float:right">
                     <c:forEach var="i" begin="0" end="${totalPage }">
                         <li class="active">
@@ -110,7 +172,7 @@
 					</div>
 		       <div class="list-product">
 				<c:forEach var="phone" items="${newest }" varStatus="status">
-             <div class="col-sm-4">
+             <div class="col-sm-3">
             		<div class="product-box">
                         <img src="<%=request.getContextPath() %>/resource/img/${phone.image}">
                         <div class="product-detail">
@@ -122,7 +184,7 @@
                       <h3>${phone.name}</h3>
                          <p>Giá:${phone.price }</p>
                             <h4>Lượt view:${phone.view}</h4>
-                            <h4>Khu vực:${phone.locat.name}</p>
+                            <h4>Khu vực:${phone.locat.name}</h4>
                     </div>
                          </div>
                       </c:forEach>
@@ -132,5 +194,3 @@
         <div class="col-md-1"></div>
 </div>
 </div>
-
-</body>

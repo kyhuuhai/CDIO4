@@ -15,6 +15,7 @@ import javax.persistence.Table;
 public class ThuongHieuEntity {
 
 	@Id
+	@Column(name="idthuonghieu")
 	private String id = UUID.randomUUID().toString();
 	
 	@Column(name="ten_thuonghieu")
@@ -26,9 +27,9 @@ public class ThuongHieuEntity {
 	@Column(name="hinhanh")
 	private String hinhanh;
 	
-	@OneToMany(mappedBy="thuonghieu")
+	@OneToMany(mappedBy="thuongHieuEntity")
 	private List<SanPhamEntity> sanpham;
-
+	
 	
 	public List<SanPhamEntity> getSanpham() {
 		return sanpham;
