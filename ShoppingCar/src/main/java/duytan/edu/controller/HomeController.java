@@ -76,4 +76,11 @@ public class HomeController {
 		model.addAttribute("pdetail", product);
 		return "product-detail";
 	}
+	
+	@RequestMapping(value="/loaisp")
+	public String findSup(@RequestParam String idloaisp,Model model){
+		List<SanPhamEntity> sp= loaispManager.findById(idloaisp).getSanpham();
+		model.addAttribute("sp", sp);	
+		return "productsup";
+	}
 }

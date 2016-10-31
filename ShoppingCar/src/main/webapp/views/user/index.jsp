@@ -74,7 +74,7 @@
                     <div class="nav nav-pills nav-stacked">
                     	<h3>DANH MỤC</h3>  
                     	  <c:forEach var="dm" items="${danhmuc }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/loaisp?iddm=${dm.id}">${dm.tenloai }</a></li>
+								<li><a href="${pageContext.request.contextPath }/loaisp?idloaisp=${dm.id}">${dm.tenloai }</a></li>
 								</c:forEach>					
 					</div>
                         </div>                        

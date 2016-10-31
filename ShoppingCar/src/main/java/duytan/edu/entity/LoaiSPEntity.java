@@ -3,6 +3,7 @@ package duytan.edu.entity;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,7 +22,7 @@ public class LoaiSPEntity {
 	@Column(name="ten_loaisp")
 	private String tenloai;
 
-	@OneToMany(mappedBy="loaiSPEntity")
+	@OneToMany(mappedBy="loaiSPEntity",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<SanPhamEntity> sanpham;
 	
 	public List<SanPhamEntity> getSanpham() {

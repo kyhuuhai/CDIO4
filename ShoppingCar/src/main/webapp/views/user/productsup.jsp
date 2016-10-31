@@ -8,16 +8,16 @@
                     <div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>DANH MỤC</h3>  
-                    	  <c:forEach var="category" items="${Lcate }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/cate?idcategory=${category.idcategory}">${category.name }</a></li>
+                    	  <c:forEach var="dm" items="${danhmuc }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/loaisp?idloaisp=${dm.id}">${dm.tenloai }</a></li>
 								</c:forEach>					
 					</div>
                         </div>                        
 					<div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>HÃNG SẢN XUẤT</h3>   
-                    	  <c:forEach var="supplier" items="${Lsup }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/supply?idsupplier=${supplier.idsupplier}">${supplier.name }</a></li>
+                    	  <c:forEach var="supplier" items="${HangSanXuat }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/supply?idsupplier=${supplier.id}">${supplier.name }</a></li>
 								</c:forEach>						
 					</div>
                         </div>    
@@ -29,21 +29,20 @@
 					</div>
                     	<div class="nav nav-pills nav-stacked">
                      <div class="list-product">
-                <c:forEach var="phone" items="${findsup.listproduct }" varStatus="status">
+				<c:forEach var="sp" items="${sp }" varStatus="status">
              <div class="col-sm-3">
-                       <div class="product-box">
-                         <img src="<%=request.getContextPath() %>/resource/img/${phone.image}">
+            		<div class="product-box">
+                        <img src="<%=request.getContextPath() %>/resource/images/4s.jpg">
                         <div class="product-detail">
-                            <a href="${pageContext.request.contextPath }/detail?idproduct=${phone.idproduct}" class="btn btn-default detail">XEM CHI TIẾT</a>
-                    </div>
-                              <h3>${phone.name}</h3>
-                         <p>Giá:${phone.price }</p>
-                            <h4>Lượt view:${phone.view}</h4>
-                            <h4>Khu vực:${phone.locat.name}</h4>
+                            <a href="${pageContext.request.contextPath }/detail?idsp=${sp.id}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>
-                        
+                   <!--      <div class="descrip-product"> -->
+                          <h3>${sp.name}</h3>
+                         <p>Giá:${sp.dongiasp}</p>
+                    </div>
+                    
                          </div>
-                         </c:forEach>
+                      </c:forEach>
                     </div>
                     </div>
                     </div>
