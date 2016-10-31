@@ -9,16 +9,16 @@
                     <div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>DANH MỤC</h3>  
-                    	  <c:forEach var="category" items="${Lcate }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/cate?idcategory=${category.idcategory}">${category.name }</a></li>
+                    	  <c:forEach var="dm" items="${danhmuc }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/loaisp?iddm=${dm.id}">${dm.tenloai }</a></li>
 								</c:forEach>					
 					</div>
                         </div>                        
 					<div class="menu-left">
                     <div class="nav nav-pills nav-stacked">
                     	<h3>HÃNG SẢN XUẤT</h3>   
-                    	  <c:forEach var="supplier" items="${Lsup }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/supply?idsupplier=${supplier.idsupplier}">${supplier.name }</a></li>
+                    	  <c:forEach var="supplier" items="${HangSanXuat }" varStatus="status">
+								<li><a href="${pageContext.request.contextPath }/supply?idsupplier=${supplier.id}">${supplier.name }</a></li>
 								</c:forEach>						
 					</div>
                         </div>    
@@ -32,16 +32,14 @@
                 	<h1>${pdetail.name}</h1>
              <div class="col-sm-3">
                        <div class="product-box">
-                         <img src="<%=request.getContextPath() %>/resource/img/${pdetail.image}" style="height: auto">                 
+                         <img src="<%=request.getContextPath() %>/resource/images/4s.jpg" style="height: auto">                 
                         </div>
                         </div>
                         <div class=col-sm-6>
                         <div class="detail-information">
-                         <h1>$:${pdetail.price }</h1>
-                            <p><b>Lượt view:</b>${pdetail.view}</p>
-                            <p><b>Khu vực:</b>${pdetail.locat.name}</p>
+                         <h1>$:${pdetail.dongiasp }</h1>
                               <form action="addcart" method="post">
-                            <a href="${pageContext.request.contextPath}/addcart?idproduct=${pdetail.idproduct}" class="btn btn-default add">Thêm vào giỏ</a>
+                            <a href="${pageContext.request.contextPath}/addcart?idsp=${pdetail.id}" class="btn btn-default add">Thêm vào giỏ</a>
                            </form>
                             <h3>ĐẶC ĐIỂM CHI TIẾT</h3>
                           <i class="	glyphicon glyphicon-ok"></i>  <p>${pdetail.description }</p><br>
@@ -50,8 +48,8 @@
                      </div>
                          </div>
                     </div>
-                    <div class="nav nav-pills nav-stacked menu-left">
-					<h3>THÔNG SỐ KỸ THUẬT</h3>	
+                 <%--    <div class="nav nav-pills nav-stacked menu-left">
+					<h3>THÔNG SỐ KỸ THUẬT</h3>
 						<div class="table-responsive cart-infor">
 						<div>
     			<table class="table table-condensed">
@@ -94,7 +92,7 @@
     				</table>
     				</div>		
     		</div>
-					</div>
+					</div> --%>
 					</div>
 					</div>
 </div>

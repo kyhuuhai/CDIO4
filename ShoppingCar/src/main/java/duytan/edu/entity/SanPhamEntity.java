@@ -21,10 +21,13 @@ public class SanPhamEntity {
 	private String name;
 	
 	@Column(name="dongiasp")
-	private float diachi;
+	private float dongiasp;
 	
 	@Column(name="hinhanh")
-	private String hinhanh;
+	private String image;
+	
+	@Column(name="description")
+	private String description;
 	
 	@ManyToOne
 	@JoinColumn(name="id_thuonghieu")
@@ -50,20 +53,20 @@ public class SanPhamEntity {
 		this.name = name;
 	}
 
-	public float getDiachi() {
-		return diachi;
+	public float getdongiasp() {
+		return dongiasp	;
 	}
 
-	public void setDiachi(float diachi) {
-		this.diachi = diachi;
+	public void setdongiasp(float dongiasp) {
+		this.dongiasp = dongiasp;
 	}
 
-	public String getHinhanh() {
-		return hinhanh;
+	public String getimage() {
+		return image;
 	}
 
-	public void setHinhanh(String hinhanh) {
-		this.hinhanh = hinhanh;
+	public void setimage(String image) {
+		this.image = image;
 	}
 
 	public ThuongHieuEntity getThuongHieuEntity() {
@@ -81,13 +84,40 @@ public class SanPhamEntity {
 	public void setLoaiSPEntity(LoaiSPEntity loaiSPEntity) {
 		this.loaiSPEntity = loaiSPEntity;
 	}
+	
+	
 
-	public SanPhamEntity(String name, float diachi, String hinhanh, ThuongHieuEntity thuongHieuEntity,
+	public float getDongiasp() {
+		return dongiasp;
+	}
+
+	public void setDongiasp(float dongiasp) {
+		this.dongiasp = dongiasp;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public SanPhamEntity(String name, float dongiasp, String image,String Description, ThuongHieuEntity thuongHieuEntity,
 			LoaiSPEntity loaiSPEntity) {
 		super();
 		this.name = name;
-		this.diachi = diachi;
-		this.hinhanh = hinhanh;
+		this.dongiasp = dongiasp;
+		this.image = image;
+		this.description = Description;
 		this.thuongHieuEntity = thuongHieuEntity;
 		this.loaiSPEntity = loaiSPEntity;
 	}
