@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+logicalFilePath="db.changelog.dbmaster-3.0.xml">
+    <changeSet author="KimAnh (generated)" id="1477910612606-1">
+        <createTable tableName="chitietsanpham">
+            <column name="idchitietsanpham" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dungtichxang" type="VARCHAR(36)"/>
+            <column name="hopso" type="VARCHAR(36)"/>
+            <column name="loaidongco" type="VARCHAR(36)"/>
+            <column name="phuocsau" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1477910612606-2">
+        <addColumn tableName="sanpham">
+            <column name="idchitietsanpham" type="VARCHAR(45)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1477910612606-3">
+        <addPrimaryKey columnNames="idchitietsanpham" constraintName="PRIMARY" tableName="chitietsanpham"/>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1477910612606-4">
+        <createIndex indexName="k_idx" tableName="sanpham">
+            <column name="idchitietsanpham"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1477910612606-5">
+        <addForeignKeyConstraint baseColumnNames="idchitietsanpham" baseTableName="sanpham" constraintName="ijji" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+
+onUpdate="NO ACTION" referencedColumnNames="idchitietsanpham" referencedTableName="chitietsanpham"/>
+    </changeSet>
+    </databaseChangeLog>
