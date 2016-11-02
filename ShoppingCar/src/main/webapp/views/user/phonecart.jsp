@@ -18,29 +18,27 @@
     				</thead>
     				<c:set var="sum" value="0"></c:set>
     				<c:forEach var="cart" items="${cart}">
-    				<c:set var="s" value="${s+ cart.product.price* cart.quantity }"></c:set>
+    				<c:set var="s" value="${s+ cart.giaban* cart.soluong  }"></c:set>
     			<tbody>
     				<tr>
     					<td class="cart-image">
-    						<img src="<%=request.getContextPath()%>/resource/img/${cart.product.image}" style="width:100px; heigth:100px">
+    						<img src="<%=request.getContextPath()%>/resource/images/4s.jpg" style="width:100px; heigth:100px">
     					</td>
     					<td class="cart-name">
-    						<h4>${cart.product.name }</h4>
+    						<h4>${cart.sanPham.name }</h4>
     					</td>
     					<td class="cart-price">
-    						<h4>${cart.product.price }đ</h4>
+    						<h4>${cart.giaban }đ</h4>
     					</td>
-    						<%-- <c:forEach var="cart" items="${cart.listCartItem }"> --%>
     					<td class="cart-quantity">
-    						<h4>${cart.quantity } cái</h4>
+    						<h4>${cart.soluong } cái</h4>
     					</td>
-    	<%-- 				</c:forEach> --%>
     						<td class="cart-total">
-    						<h4>${cart.product.price* cart.quantity }đ</h4>
+    						<h4>${ cart.giaban* cart.soluong  }đ</h4>
     					</td>
     							<%-- 	</c:forEach> --%>	
     					<td class="cart-delete">
-    						<a href="${pageContext.request.contextPath }/deletecart?idproduct=${cart.product.idproduct}" onclick="return confirm('Are you sure DELETE')"><i class="glyphicon glyphicon-trash"></i></a>
+    						<a href="${pageContext.request.contextPath }/deletecart?idsp=${cart.sanPham.id}" onclick="return confirm('Are you sure DELETE')"><i class="glyphicon glyphicon-trash"></i></a>
     					</td>
     						
     				</tr>

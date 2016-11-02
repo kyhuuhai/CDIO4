@@ -1,11 +1,15 @@
 package duytan.edu.entity;
 
+import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -37,6 +41,11 @@ public class SanPhamEntity {
 	@JoinColumn(name="id_loaisp")
 	private LoaiSPEntity loaiSPEntity;
 
+	 @ManyToMany(targetEntity = HoadonEntity.class, cascade = {CascadeType.ALL})
+	    @JoinTable(name = "cthoadon", joinColumns = { @JoinColumn(name = "id_sp") }, 
+	                       inverseJoinColumns = { @JoinColumn(name = "id_hoadon") })
+	private List<HoadonEntity> hoadons;
+	
 	public String getId() {
 		return id;
 	}
