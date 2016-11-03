@@ -52,17 +52,17 @@
 							<div class="col-md-6">
 								<a href="#">
 									<div class="face">
-										<img src="resource/images/login/i_face.png" width="25"
+										<img src="resource/images/i_face.png" width="25"
 											height="25">
 									</div>
 								</a> <a href="#">
 									<div class="google">
-										<img src="resource/images/login/i_google.png" width="25"
+										<img src="resource/images/i_google.png" width="25"
 											height="25">
 									</div>
 								</a> <a href="#">
 									<div class="twi">
-										<img src="resource/images/login/i_twi.png" width="25"
+										<img src="resource/images/i_twi.png" width="25"
 											height="25">
 									</div>
 								</a>

@@ -7,4 +7,5 @@ import duytan.edu.entity.HoadonEntity;
 public interface HoaDonEntityManager {
 	List<HoadonEntity> getAll();
 	HoadonEntity save(HoadonEntity entity);
+	List<HoadonEntity> findByUserEntityUsername(String username);
 }

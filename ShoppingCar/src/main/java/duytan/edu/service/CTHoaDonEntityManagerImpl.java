@@ -30,5 +30,9 @@ public class CTHoaDonEntityManagerImpl implements CTHoaDonEntityManager{
 	public void deleteByIDSANPHAM(String idproduct) {
 		entityRepository.delete(idproduct);
 	}
+	@Override
+	public List<CTHoaDonEntity> findByHoaDonUserEntityUsername(String username) {
+		return entityRepository.findByHoaDonUserEntityUsername(username);
+	}
 
 }

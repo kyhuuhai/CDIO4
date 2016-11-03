@@ -23,7 +23,7 @@ public class LoginController {
 		
 		UserEntity userEntity=new UserEntity(username,password);
 		userManager.saveUser(userEntity);
-		return "home";
+		return "redirect:/index";
 	}
 	
 	@RequestMapping(value="/login")

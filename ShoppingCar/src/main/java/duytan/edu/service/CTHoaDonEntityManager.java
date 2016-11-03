@@ -10,4 +10,5 @@ public interface CTHoaDonEntityManager {
 	void UpdateSoLuong(String idproduct);
 	void Save(CTHoaDonEntity entity);
 	void deleteByIDSANPHAM(String idproduct);
+	List<CTHoaDonEntity> findByHoaDonUserEntityUsername( String username);
 }

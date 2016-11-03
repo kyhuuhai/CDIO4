@@ -17,9 +17,11 @@
 		<put-attribute name="body" value="/views/user/employee.jsp" />
 	</definition>
 	<definition name="login" extends="definition">
+		<put-attribute name="title" value="Login to Website" />
 		<put-attribute name="body" value="/views/user/form-login.jsp" />
 	</definition>
 	<definition name="register" extends="definition">
+	<put-attribute name="title" value="Register to Website" />
 		<put-attribute name="body" value="/views/user/form-register.jsp" />
 	</definition>
 	<definition name="product" extends="definition">

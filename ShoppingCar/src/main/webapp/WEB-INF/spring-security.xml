@@ -19,7 +19,7 @@
 			authentication-failure-handler-ref="loginFailureHandler"
 			always-use-default-target="false" />
 
-            <logout logout-url="/logout" logout-success-url="/home"></logout>
+            <logout logout-url="/logout"></logout>
  
     </http>
 
@@ -43,7 +43,7 @@
 	</beans:bean>
 	
 		<beans:bean id="loginSuccessHandler" class="duytan.edu.security.LoginSuccessHandler">
-			<beans:property name="defaultTargetUrl" value="/home"></beans:property>
+			<beans:property name="defaultTargetUrl" value="/index"></beans:property>
 		</beans:bean>
 		<beans:bean id="loginFailureHandler" class="duytan.edu.security.LoginFailureHandler">
 			<beans:property name="defaultFailureUrl" value="/login" />

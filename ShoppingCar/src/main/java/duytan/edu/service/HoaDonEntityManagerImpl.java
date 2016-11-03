@@ -22,5 +22,9 @@ public class HoaDonEntityManagerImpl implements HoaDonEntityManager{
 	public HoadonEntity save(HoadonEntity entity) {
 		return entityRepository.save(entity);
 	}
+	@Override
+	public List<HoadonEntity> findByUserEntityUsername(String username) {
+		return entityRepository.findByUserEntityUsername(username);
+	}
 
 }

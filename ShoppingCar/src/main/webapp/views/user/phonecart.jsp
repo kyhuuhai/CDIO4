@@ -38,7 +38,7 @@
     					</td>
     							<%-- 	</c:forEach> --%>	
     					<td class="cart-delete">
-    						<a href="${pageContext.request.contextPath }/deletecart?idsp=${cart.sanPham.id}" onclick="return confirm('Are you sure DELETE')"><i class="glyphicon glyphicon-trash"></i></a>
+    						<a href="${pageContext.request.contextPath }/deletecart?idcart=${cart.id}" onclick="return confirm('Are you sure DELETE')"><i class="glyphicon glyphicon-trash"></i></a>
     					</td>
     						
     				</tr>
@@ -52,7 +52,7 @@
     			</tr> 	
     			</table>
     		</div>
-    			<a href="<spring:url value="/home" />" class="btn btn-default"  style="background: #F0F0E9">BACK</a>
+    			<a href="${pageContext.request.contextPath }/index" class="btn btn-default"  style="background: #F0F0E9;">BACK</a>
     			 <form action="checkout" method="post">
  	<button  value="create" name="create">ĐẶT HÀNG</button>
  </form><br>

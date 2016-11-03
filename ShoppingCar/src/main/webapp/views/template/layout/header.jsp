@@ -23,6 +23,7 @@
 					<div class="col-md-6">
 						<div class="menu-acount pull-right">
 							<ul class="nav nav-pills account-cust">
+							<c:if test="${pageContext.request.userPrincipal.name == null}">
 								<li>
 									<a href="${pageContext.request.contextPath }/login"><span class="glyphicon glyphicon-user">
 									
@@ -30,13 +31,19 @@
     
 								</li>
 								<li>
-										<a href="${pageContext.request.contextPath }/addorder"><i class="glyphicon glyphicon-user"></i><span>SIGN UP</span></a>
+										<a href="${pageContext.request.contextPath }/register"><i class="glyphicon glyphicon-user"></i><span>SIGN UP</span></a>
 
 								</li>
-									<li>
-										<a href="${pageContext.request.contextPath }/viewcart"><i class="glyphicon glyphicon-shopping-cart"></i><span>CART</span></a>
+								</c:if>
+								<c:if test="${pageContext.request.userPrincipal.name != null}">
+								<li>
+										<a href="${pageContext.request.contextPath }/cart"><i class="glyphicon glyphicon-shopping-cart"></i><span>CART</span></a>
 
 								</li>
+								<li>
+								<a href="<c:url value="/logout" />" > Log Out</a>
+								</li>
+								</c:if>
 							</ul>
 						</div>
 					</div>

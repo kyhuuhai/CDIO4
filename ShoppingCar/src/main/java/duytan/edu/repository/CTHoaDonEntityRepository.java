@@ -1,5 +1,7 @@
 package duytan.edu.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,6 +19,8 @@ public interface CTHoaDonEntityRepository extends JpaRepository<CTHoaDonEntity,S
 	
 	@Modifying
 	@Transactional
-	@Query("Delete from CTHoaDonEntity c where c.sanPham.id = :idproduct ")
-	void deleteByIDSANPHAM(@Param("idproduct") String idproduct);
+	@Query("DELETE FROM CTHoaDonEntity c WHERE c.id = :idcart ")
+	void deleteByIDSANPHAM(@Param("idcart") String idcart);
+	
+	List<CTHoaDonEntity> findByHoaDonUserEntityUsername( String username);
 }

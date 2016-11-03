@@ -38,9 +38,16 @@
                         <div class=col-sm-6>
                         <div class="detail-information">
                          <h1>$:${pdetail.dongiasp }</h1>
+                         <c:if test="${pageContext.request.userPrincipal.name != null}">
                               <form action="addcart" method="post">
                             <a href="${pageContext.request.contextPath}/addcart?idsp=${pdetail.id}" class="btn btn-default add">Thêm vào giỏ</a>
                            </form>
+                           </c:if>
+                           
+                           <c:if test="${pageContext.request.userPrincipal.name == null}">
+                           	<h4 style="color: red;">Vui Lòng Đăng Nhập Để Thêm Sản Phẩm Vào Giỏ Hàng</h4>
+                           	</c:if>
+                           	
                             <h3>ĐẶC ĐIỂM CHI TIẾT</h3>
                           <i class="	glyphicon glyphicon-ok"></i>  <p>${pdetail.description }</p><br>
                           
