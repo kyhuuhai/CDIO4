@@ -22,10 +22,10 @@
     			<tbody>
     				<tr>
     					<td class="cart-image">
-    						<img src="<%=request.getContextPath()%>/resource/images/4s.jpg" style="width:100px; heigth:100px">
+    						<img src="<%=request.getContextPath()%>/resource/images/bike.jpg" style="width:100px; heigth:100px">
     					</td>
     					<td class="cart-name">
-    						<h4>${cart.sanPham.name }</h4>
+    						<h4>${cart.sanPhamEntity.name }</h4>
     					</td>
     					<td class="cart-price">
     						<h4>${cart.giaban }đ</h4>
@@ -54,7 +54,7 @@
     		</div>
     			<a href="${pageContext.request.contextPath }/index" class="btn btn-default"  style="background: #F0F0E9;">BACK</a>
     			 <form action="checkout" method="post">
- 	<button  value="create" name="create">ĐẶT HÀNG</button>
+ 	<button  value="create" name="create" onclick="return confirm('Are you wanna this product ?')">ĐẶT HÀNG</button>
  </form><br>
     		</div>
     </section>

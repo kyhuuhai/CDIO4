@@ -19,10 +19,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import duytan.edu.entity.CTHoaDonEntity;
+import duytan.edu.entity.CartEntity;
 import duytan.edu.entity.HoadonEntity;
 import duytan.edu.entity.SanPhamEntity;
 import duytan.edu.entity.UserEntity;
 import duytan.edu.service.CTHoaDonEntityManager;
+import duytan.edu.service.CartEntityManager;
 import duytan.edu.service.HoaDonEntityManager;
 import duytan.edu.service.LoaiSPEntityManager;
 import duytan.edu.service.SanPhamEntityManager;
@@ -55,6 +57,10 @@ public class HomeController {
 	
 	@Autowired
 	UserEntityManager userManager;
+	
+	@Autowired 
+	CartEntityManager cartManager;
+	
 	@ModelAttribute
 	public void addAttribute(Model model){
 		model.addAttribute("danhmuc",loaispManager.getAllLoaiSP());
@@ -97,7 +103,7 @@ public class HomeController {
 
 	@RequestMapping(value="/cart")
 	public String cart(Model model,Principal principal){
-		model.addAttribute("cart", cthoadonManager.findByHoaDonUserEntityUsername(principal.getName()));	
+		model.addAttribute("cart", cartManager.findByUserName(principal.getName()));	
 		return "phonecart";
 	}
 
@@ -107,20 +113,16 @@ public class HomeController {
 		UserEntity user = userManager.getUserByUserName(username);
 		SanPhamEntity product=sanphamManager.findById(idsp);
 		
-		if(hoadonManager.findByUserEntityUsername(username).isEmpty())
-		if(isExist(idsp,username))
-			cthoadonManager.UpdateSoLuong(idsp);
+		if(isUsernameInCartExist(idsp,username))
+			cartManager.UpdateSoLuong(idsp);
 		else {
-			HoadonEntity hd = hoadonManager.save(new HoadonEntity(new SimpleDateFormat("yyyy-MM-dd").format(new Date()),user ));
-			cthoadonManager.Save(new CTHoaDonEntity(1,new Float(1.5),new Float( product.getDongiasp()*1.5), product, hd));
-		}else{
-			cthoadonManager.Save(new CTHoaDonEntity(1,new Float(1.5),new Float( product.getDongiasp()*1.5), product, hoadonManager.findByUserEntityUsername(username).get(0)));
+			cartManager.Save(new CartEntity(username, "1", product.getdongiasp(), product));
 		}
-		model.addAttribute("cart", cthoadonManager.findByHoaDonUserEntityUsername(username));
+		model.addAttribute("cart", cartManager.findByUserName(username));
 		return "redirect:/cart";
 	}
 	
-	private boolean isExist(String id,String username){
+	private boolean isHoadonExist(String id,String username){
 		for (CTHoaDonEntity ctHoaDonEntity : cthoadonManager.findByHoaDonUserEntityUsername(username)) {
 			if(ctHoaDonEntity.getsanPham().getId().equals(id))
 				return true;
@@ -128,9 +130,25 @@ public class HomeController {
 		return false;
 	}
 	
+	private boolean isUsernameInCartExist(String id,String username){
+		for (CartEntity cart : cartManager.findByUserName(username)) {
+			if(cart.getSanPhamEntity().getId().equals(id))
+				return true;
+		}
+		return false;
+	}
+	
 	@RequestMapping(value="/deletecart")
 	public String deletecart(@RequestParam String idcart,Model model){
-		cthoadonManager.deleteByIDSANPHAM(idcart);
+		cartManager.deleteByIDSANPHAM(idcart);
 		return "redirect:/cart";
+	}
+	@RequestMapping(value="/checkout")
+	public String checkout(Model model,Principal principal){
+		HoadonEntity hoadon = hoadonManager.save(new HoadonEntity(new SimpleDateFormat("yyyy-MM-dd").format(new Date()),userManager.getUserByUserName(principal.getName())));
+		for (CartEntity cart : cartManager.findByUserName(principal.getName())) {
+			cthoadonManager.Save(new CTHoaDonEntity(Integer.parseInt(cart.getSoluong()),(float) 1.5, cart.getGiaban(), cart.getSanPhamEntity(), hoadon));
+		}
+		return "thank";
 	}
 }

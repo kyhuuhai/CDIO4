@@ -41,7 +41,7 @@
     		<div class="col-sm-4 footer_middle_item">
     			<div class="footer-item-tittle">
     				<a class="" href="">
-    					<div class="footer-item-tittle-name">Group TPM3</div>
+    					<div class="footer-item-tittle-name">Group TPM2</div>
     					<div class="footer-item-tittle-icon"></div>
     				</a>
     				<a href="https://www.facebook.com/shuichiakai.cool" class="fa fa-facebook"></a>
@@ -54,14 +54,14 @@
     		<div class="col-sm-4 footer_middle_item">
     		<div class="footer-item-tittle">
     			<a class="" href="">
-    					<div class="footer-item-tittle-name">PHẠM AN BÌNH</div>
+    					<div class="footer-item-tittle-name">Kỳ Hữu Hải</div>
     					<div class="footer-item-tittle-icon"></div>
     				</a>
     				<a href="https://www.facebook.com/phamanbinhDTU?fref=ts" class="fa fa-facebook"></a>
     			<span>SĐT:XXXXXXXXX</span><br>
     			<span>Address: XXXXXXXXX</span><br>
-    			<span>GIẢNG VIÊN: KHOA CNTT</span><br>
-    				<span>Email:<a href="mailto:phamanbinh@gmail.com">phamanbinh@gmail.com</a></span><br>
+    			<span> KHOA CNTT</span><br>
+    				<span>Email:<a href="mailto:phamanbinh@gmail.com">kyhuuhai@gmail.com</a></span><br>
     			</div>
     			</div>
     			<div class="col-sm-4 footer_middle_item">
@@ -71,10 +71,10 @@
     					<div class="footer-item-tittle-icon"></div>
     				</a>
     				<a href="https://www.facebook.com/phamanbinhDTU?fref=ts" class="fa fa-facebook"></a>
-    					<span>Admin:<a href="mailto:levanvien@gmail.com">levanvien@gmail.com</a></span><br>
-    					<span>Sale:<a href="mailto:dovuquan@gmail.com">dovuquan@gmail.com</a></span><br>
-    					<span>Support:<a href="mailto:nguyenquocduy@gmail.com">guyenquocduy@gmail.com</a></span><br>
-    					<span>Employee:<a href="mailto:duongvanthieu@gmail.com">duongvanthieu@gmail.com</a></span><br>
+    					<span>Admin:<a href="mailto:levanvien@gmail.com">truc@gmail.com</a></span><br>
+    					<span>Sale:<a href="mailto:dovuquan@gmail.com">quy@gmail.com</a></span><br>
+    					<span>Support:<a href="mailto:nguyenquocduy@gmail.com">ghost@gmail.com</a></span><br>
+    					<span>Employee:<a href="mailto:duongvanthieu@gmail.com">phuc@gmail.com</a></span><br>
     			</div>
     			</div>
     		</div>
