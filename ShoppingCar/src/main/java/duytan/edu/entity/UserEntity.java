@@ -3,10 +3,14 @@ package duytan.edu.entity;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +30,11 @@ public class UserEntity {
 	@OneToMany(mappedBy="userEntity")
 	private List<HoadonEntity> hoadon;
 	
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	private KhachHangEntity khachhang;
+	
+	
 	
 	public UserEntity(String username, String password) {
 		super();
@@ -42,6 +51,16 @@ public class UserEntity {
 
 	public List<HoadonEntity> getHoadon() {
 		return hoadon;
+	}
+
+
+	public KhachHangEntity getKhachhang() {
+		return khachhang;
+	}
+
+
+	public void setKhachhang(KhachHangEntity khachhang) {
+		this.khachhang = khachhang;
 	}
 
 
