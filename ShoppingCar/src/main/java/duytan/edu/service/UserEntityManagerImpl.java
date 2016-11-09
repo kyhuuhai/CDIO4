@@ -25,4 +25,10 @@ public class UserEntityManagerImpl implements UserEntityManager{
 		return userRepository.findByUsername(UserName);
 	}
 
+	@Override
+	public UserEntity findByname(String username) {
+		// TODO Auto-generated method stub
+		return userRepository.findByUsername(username);
+	}
+
 }

@@ -5,7 +5,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <html>
 <head>
-<title><tiles:getAsString name="title" /></title>
+<%-- <title><tiles:getAsString name="title" /></title> --%>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

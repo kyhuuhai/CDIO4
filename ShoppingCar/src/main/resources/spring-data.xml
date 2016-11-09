@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-	<context:component-scan base-package="duytan.edu" />
+	<context:component-scan base-package="duytan.edu.*" />
 	<context:property-placeholder location="classpath:database.properties"
 		order="0" ignore-unresolvable="true" />
 	<bean id="entityManagerFactory"

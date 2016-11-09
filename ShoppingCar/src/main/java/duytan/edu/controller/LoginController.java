@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import duytan.edu.entity.UserEntity;
 import duytan.edu.service.UserEntityManager;
+import duytan.edu.validator.UserValidator;
 
 @Controller
 @RequestMapping(value="/")
@@ -15,13 +16,15 @@ public class LoginController {
 
 	@Autowired
 	UserEntityManager userManager;
-	
+	@Autowired
+	UserValidator valaditor;
 	@RequestMapping(value = "/saveuser")
 	public String saveuser(HttpServletRequest request) {
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		
 		UserEntity userEntity=new UserEntity(username,password);
+		/*valaditor.validate(username, password);*/
 		userManager.saveUser(userEntity);
 		return "redirect:/index";
 	}

@@ -6,4 +6,5 @@ public interface UserEntityManager {
 
 	UserEntity getUserByUserName(String UserName);
 	void saveUser(UserEntity user);
+	UserEntity findByname(String username);
 }
