@@ -84,7 +84,7 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>PHONE</span>-MARKET</h1>
+									<h1><span>Car</span>-MARKET</h1>
 									<h2>Free Sale on</h2>
 									<p>Nhằm tri ân khách hàng và đợt giảm giá hằng năm chúng tôi muốn gửi lời cảm ơn đến các thành viên đã ủng hộ mua hàng..Các bạn có thể xem chi tiết các sản phẩm tại đây</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
@@ -95,7 +95,7 @@
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-							<h1><span>PHONE</span>-MARKET</h1>
+							<h1><span>Car</span>-MARKET</h1>
 									<h2>Free Sale on</h2>
 									<p>Nhằm tri ân khách hàng và đợt giảm giá hằng năm chúng tôi muốn gửi lời cảm ơn đến các thành viên đã ủng hộ mua hàng..Các bạn có thể xem chi tiết các sản phẩm tại đây</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
@@ -108,7 +108,7 @@
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>PHONE</span>-MARKET</h1>
+									<h1><span>Car</span>-MARKET</h1>
 									<h2>Free Sale on</h2>
 									<p>Nhằm tri ân khách hàng và đợt giảm giá hằng năm chúng tôi muốn gửi lời cảm ơn đến các thành viên đã ủng hộ mua hàng..Các bạn có thể xem chi tiết các sản phẩm tại đây</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
@@ -137,7 +137,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="container content">
-                THANK YOU FOR BUY
+                THANK YOU FOR USING MY WEBSITE
             </div>
             </div>
         <div class="col-md-1"></div>

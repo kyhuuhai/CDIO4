@@ -98,25 +98,6 @@ public class CTHoaDonEntity {
 		this.hoaDon = hoadon;
 	}
 
-	public CTHoaDonEntity(String id, int soluong, float chietkhau, float giaban) {
-		super();
-		this.id = id;
-		this.soluong = soluong;
-		this.chietkhau = chietkhau;
-		this.giaban = giaban;
-	}
-	
-	public CTHoaDonEntity(String id, int soluong, float chietkhau, float giaban, SanPhamEntity sanPham,
-			HoadonEntity hoaDon) {
-		super();
-		this.id = id;
-		this.soluong = soluong;
-		this.chietkhau = chietkhau;
-		this.giaban = giaban;
-		this.sanPham = sanPham;
-		this.hoaDon = hoaDon;
-	}
-
 	public void IncreSoLuong(){
 		soluong = soluong+1;
 	}

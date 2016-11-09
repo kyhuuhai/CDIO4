@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -36,6 +37,9 @@ public class SanPhamEntity {
 	@ManyToOne
 	@JoinColumn(name="id_thuonghieu")
 	private ThuongHieuEntity thuongHieuEntity;
+	
+	@OneToMany(mappedBy="sanPhamEntity")
+	private List<CartEntity> cartEntity;
 	
 	@ManyToOne
 	@JoinColumn(name="id_loaisp")
@@ -133,6 +137,22 @@ public class SanPhamEntity {
 
 	public SanPhamEntity() {
 		super();
+	}
+
+	public List<CartEntity> getCartEntity() {
+		return cartEntity;
+	}
+
+	public void setCartEntity(List<CartEntity> cartEntity) {
+		this.cartEntity = cartEntity;
+	}
+
+	public List<HoadonEntity> getHoadons() {
+		return hoadons;
+	}
+
+	public void setHoadons(List<HoadonEntity> hoadons) {
+		this.hoadons = hoadons;
 	}
 	
 	

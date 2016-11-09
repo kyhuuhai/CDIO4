@@ -139,7 +139,7 @@
 				<c:forEach var="sp" items="${sanpham }" varStatus="status">
              <div class="col-sm-3">
             		<div class="product-box">
-                        <img src="<%=request.getContextPath() %>/resource/images/4s.jpg">
+                        <img src="<%=request.getContextPath() %>/resource/images/bike.jpg">
                         <div class="product-detail">
                             <a href="${pageContext.request.contextPath }/detail?idsp=${sp.id}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>

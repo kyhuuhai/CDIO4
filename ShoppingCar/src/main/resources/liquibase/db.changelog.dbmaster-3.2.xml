@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+logicalFilePath="db.changelog.dbmaster-3.2.xml">
+         <changeSet author="KimAnh (generated)" id="1478435896045-1">
+        <createIndex indexName="cart_sanpham_idx" tableName="cart">
+            <column name="idproduct"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1478435896045-2">
+        <addForeignKeyConstraint baseColumnNames="idproduct" baseTableName="cart" constraintName="cart_sanpham" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idsanpham" referencedTableName="sanpham"/>
+    </changeSet>
+    </databaseChangeLog>

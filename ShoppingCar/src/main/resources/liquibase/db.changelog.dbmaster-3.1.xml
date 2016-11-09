@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+logicalFilePath="db.changelog.dbmaster-3.1.xml">
+     <changeSet author="KimAnh (generated)" id="1478433680344-1">
+        <createTable tableName="cart">
+            <column name="idcart" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="idproduct" type="VARCHAR(45)"/>
+            <column name="soluong" type="VARCHAR(45)"/>
+            <column name="giaban" type="FLOAT(12)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1478433680344-2">
+        <addPrimaryKey columnNames="idcart" constraintName="PRIMARY" tableName="cart"/>
+    </changeSet>
+    <changeSet author="KimAnh (generated)" id="1478433680344-3">
+        <dropColumn columnName="ten_hoadon" tableName="hoadon"/>
+    </changeSet>
+    </databaseChangeLog>

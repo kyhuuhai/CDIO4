@@ -54,4 +54,8 @@
 		<put-attribute name="title" value="producDetails Page" /> 
 		<put-attribute name="body" value="/views/user/phonecart.jsp" />
 </definition>
+<definition name="thank" extends="definition">
+		<put-attribute name="title" value="Thanks You " /> 
+		<put-attribute name="body" value="/views/user/thankcheckout.jsp" />
+</definition>
 </tiles-definitions>

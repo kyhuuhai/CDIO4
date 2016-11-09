@@ -10,7 +10,7 @@
                     <div class="nav nav-pills nav-stacked">
                     	<h3>DANH MỤC</h3>  
                     	  <c:forEach var="dm" items="${danhmuc }" varStatus="status">
-								<li><a href="${pageContext.request.contextPath }/loaisp?iddm=${dm.id}">${dm.tenloai }</a></li>
+								<li><a href="${pageContext.request.contextPath }/loaisp?idloaisp=${dm.id}">${dm.tenloai }</a></li>
 								</c:forEach>					
 					</div>
                         </div>                        
@@ -32,7 +32,7 @@
                 	<h1>${pdetail.name}</h1>
              <div class="col-sm-3">
                        <div class="product-box">
-                         <img src="<%=request.getContextPath() %>/resource/images/4s.jpg" style="height: auto">                 
+                         <img src="<%=request.getContextPath() %>/resource/images/bike.jpg" style="height: auto">                 
                         </div>
                         </div>
                         <div class=col-sm-6>
