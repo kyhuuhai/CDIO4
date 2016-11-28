@@ -62,7 +62,7 @@
             <div id="custom-search-input">
 			<form action="search" method="POST">
                 <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" name="name" style="    font-family: -webkit-pictograph;"/>
+                    <input type="text" class="form-control input-lg" name="name" id="name" style="    font-family: -webkit-pictograph;"/>
                     <span class="input-group-btn  search-button">
                         <button  class="btn btn-info search-button btn-lg" type="submit">
                             <i class="glyphicon glyphicon-search"></i>

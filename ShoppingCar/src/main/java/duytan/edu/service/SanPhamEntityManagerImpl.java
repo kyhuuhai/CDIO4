@@ -25,5 +25,11 @@ public class SanPhamEntityManagerImpl implements SanPhamEntityManager{
 		// TODO Auto-generated method stub
 		return entityRepository.findOne(id);
 	}
+
+	@Override
+	public List<SanPhamEntity> findByName(String name) {
+		// TODO Auto-generated method stub
+		return entityRepository.findByNameContaining(name);
+	}
 	
 }

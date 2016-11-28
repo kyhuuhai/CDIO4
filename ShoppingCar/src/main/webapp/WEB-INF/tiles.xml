@@ -5,11 +5,12 @@
 
 	<!-- Base Define -->
 	<definition name="definition" template="/views/template/layout/template.jsp">
+		<put-attribute name="slide" value="/views/template/layout/slide.jsp" />
 		<put-attribute name="header" value="/views/template/layout/header.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/views/template/layout/footer.jsp" />
 	</definition>
-
+	
 	<definition name="home" extends="definition">
 		<put-attribute name="body" value="/views/user/home.jsp" />
 	</definition>

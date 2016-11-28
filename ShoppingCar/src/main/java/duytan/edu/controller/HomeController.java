@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,6 +87,14 @@ public class HomeController {
 	public ModelAndView index( ModelAndView model) {
 		model.setViewName("index");
 		return model;
+	}
+	
+	@RequestMapping(value="/search")
+	public String searchProduct( Model model,HttpServletRequest request){
+		String name = request.getParameter("name");
+		List<SanPhamEntity> product= sanphamManager.findByName(name);
+		model.addAttribute("sanpham", product);
+		return "index";
 	}
 	
 	@RequestMapping(value="/detail")

@@ -8,4 +8,5 @@ public interface SanPhamEntityManager {
 
 	public List<SanPhamEntity> getAllSanPham();
 	public SanPhamEntity findById(String id);
+	public List<SanPhamEntity> findByName(String name);
 }
