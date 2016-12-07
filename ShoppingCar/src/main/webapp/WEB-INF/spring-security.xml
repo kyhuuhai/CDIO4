@@ -5,12 +5,21 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<http use-expressions="true" auto-config="false">
+	<http use-expressions="true" auto-config="false" >
 		<csrf disabled="true" />
-		<!-- <intercept-url pattern="/*" access="isAuthenticated() " /> -->
 		<intercept-url pattern="/home" access="permitAll()" />
 		<intercept-url pattern="/login" access="permitAll()" />
+		<intercept-url pattern="/index" access="permitAll()" />
+		<intercept-url pattern="/detail" access="permitAll()" />
+		<intercept-url pattern="/loaisp" access="permitAll()" />
+		<intercept-url pattern="/index" access="permitAll()" />
+		<intercept-url pattern="/hangsx" access="permitAll()" />
+		<intercept-url pattern="/search" access="permitAll()" />
+		<intercept-url pattern="/cart" access="hasAnyRole('ROLE_NORMAL','ROLE_USER','ROLE_ADMIN')" />
 		<intercept-url pattern="/register" access="permitAll()" />
+		<intercept-url pattern="/admin**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
+		<intercept-url pattern="/" access="permitAll"/>
+        <intercept-url pattern="/*" access="denyAll"/>
 		<access-denied-handler error-page="/403" />
 
 		<form-login login-page='/login' login-processing-url="/j_spring_security_check"
