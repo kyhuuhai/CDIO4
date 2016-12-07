@@ -1,5 +1,6 @@
 package duytan.edu.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,7 +29,7 @@ public class HoadonEntity {
 	private UserEntity userEntity;
 	
 	@ManyToMany(mappedBy="hoadons", fetch = FetchType.EAGER)
-	private List<SanPhamEntity> sanphams;
+	private List<SanPhamEntity> sanphams = new ArrayList<SanPhamEntity>();
 
 	public String getId() {
 		return id;

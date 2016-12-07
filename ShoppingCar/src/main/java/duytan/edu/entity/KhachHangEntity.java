@@ -1,71 +1,57 @@
 package duytan.edu.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Entity
-@Table(name="khachhang")
-public class KhachHangEntity {
-	
+@Table(name = "khachhang")
+public class KhachHangEntity implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
-	@Column(name="idkhachhang")
+	@Column(name = "idkhachhang")
 	private String id = UUID.randomUUID().toString();
 	
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
-	
-	@Column(name="ngaysinh")
+
+	@Column(name = "ngaysinh")
 	private Date ngaysinh;
-	
-	@Column(name="email")
+
+	@Column(name = "email")
 	private String email;
-	
-	@Column(name="sdt")
-	private int sdt;
-    
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="khachhang")
-	private UserEntity use;
-	
-	
-	
-	public KhachHangEntity(String id, String name, Date ngaysinh, String email, int sdt, UserEntity use) {
+
+	@Column(name = "sdt")
+	private String sdt;
+
+	@OneToOne(cascade = CascadeType.ALL, optional = false, fetch = FetchType.EAGER, orphanRemoval = true)
+    @PrimaryKeyJoinColumn
+	private UserEntity user;
+
+	public KhachHangEntity(String name, Date ngaysinh, String email, String sdt) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.ngaysinh = ngaysinh;
 		this.email = email;
 		this.sdt = sdt;
-		this.use = use;
-	}
-
-	public UserEntity getUse() {
-		return use;
-	}
-
-	public void setUse(UserEntity use) {
-		this.use = use;
 	}
 
 	public KhachHangEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-
-	public String getId() {
-		return id;
+	public UserEntity getUser() {
+		return user;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUser(UserEntity use) {
+		this.user = use;
+		this.setId(use.getId());
 	}
 
 	public String getName() {
@@ -92,23 +78,22 @@ public class KhachHangEntity {
 		this.email = email;
 	}
 
-	public int getSdt() {
+	public String getSdt() {
 		return sdt;
 	}
 
-	public void setSdt(int sdt) {
+	public void setSdt(String sdt) {
 		this.sdt = sdt;
 	}
 
-	@Override
-	public String toString() {
-		return "KhachHangEntity [id=" + id + ", name=" + name + ", ngaysinh=" + ngaysinh + ", email=" + email + ", sdt="
-				+ sdt + "]";
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	
 	
-	
-	
-
 }

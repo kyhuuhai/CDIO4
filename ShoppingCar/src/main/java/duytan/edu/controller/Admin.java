@@ -38,7 +38,7 @@ public class Admin {
 		return "danhsachKH";
 		
 	}
-	@RequestMapping(value="/delete")
+	/*@RequestMapping(value="/delete")
 	public String deleteKH(@RequestParam int idkhachhang,Model model){
 		if(khachHangEntityManager.findId(idkhachhang)!=null){
 		   khachHangEntityManager.delete(idkhachhang);
@@ -47,6 +47,6 @@ public class Admin {
 		}
 		return"";
 		
-	}
+	}*/
 
 }

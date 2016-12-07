@@ -8,7 +8,7 @@ public interface KhachHangEntityManager {
 	KhachHangEntity create(KhachHangEntity khachhang);
 	
 	List<KhachHangEntity> getAll();
-	public void delete(int idkhachhang);
-	public KhachHangEntity findId(int idkhachhang);
+	public void delete(String idkhachhang);
+	public KhachHangEntity findId(String idkhachhang);
 	KhachHangEntity findByUsername(String username);
 }
