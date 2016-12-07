@@ -29,7 +29,7 @@ public class Admin {
 	@RequestMapping(value="/admin")
 	public String admin(){
 		
-	return "admin";
+	return "login";
 	}
 	@RequestMapping(value="/danhsach")
 	public String danhsach(Model model){
