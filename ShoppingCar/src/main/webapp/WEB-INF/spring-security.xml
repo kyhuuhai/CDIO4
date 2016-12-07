@@ -15,11 +15,13 @@
 		<intercept-url pattern="/index" access="permitAll()" />
 		<intercept-url pattern="/hangsx" access="permitAll()" />
 		<intercept-url pattern="/search" access="permitAll()" />
+		<intercept-url pattern="/admin" access="permitAll()" />
+		<intercept-url pattern="customer" access="permitAll()" />
 		<intercept-url pattern="/cart" access="hasAnyRole('ROLE_NORMAL','ROLE_USER','ROLE_ADMIN')" />
 		<intercept-url pattern="/register" access="permitAll()" />
-		<intercept-url pattern="/admin**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
-		<intercept-url pattern="/" access="permitAll"/>
-        <intercept-url pattern="/*" access="denyAll"/>
+		<!-- <intercept-url pattern="/admin**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/> -->
+		<!-- <intercept-url pattern="/" access="permitAll"/>
+        <intercept-url pattern="/*" access="denyAll"/> -->
 		<access-denied-handler error-page="/403" />
 
 		<form-login login-page='/login' login-processing-url="/j_spring_security_check"

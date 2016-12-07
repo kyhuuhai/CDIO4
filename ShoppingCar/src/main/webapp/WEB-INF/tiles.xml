@@ -10,7 +10,21 @@
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/views/template/layout/footer.jsp" />
 	</definition>
-	
+		<!-- Base Admin -->
+	<definition name="definition1" template="/views/template/Admin/admin.jsp">
+		<put-attribute name="navbar" value="/views/template/Admin/navbar.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	<!-- Extends Admin -->
+	<definition name="admin" extends="definition1">
+		<put-attribute name="body" value="/views/admin/admin.jsp" />
+	</definition>
+	<definition name="customer" extends="definition1">
+		<put-attribute name="body" value="/views/admin/customer.jsp" />
+	</definition>
+	<definition name="orderpage" extends="definition1">
+		<put-attribute name="body" value="/views/admin/orderpage.jsp" />
+	</definition>
 	<definition name="home" extends="definition">
 		<put-attribute name="body" value="/views/user/home.jsp" />
 	</definition>

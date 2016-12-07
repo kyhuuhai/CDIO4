@@ -3,6 +3,7 @@ package duytan.edu.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +14,7 @@ import duytan.edu.service.KhachHangEntityManager;
 import duytan.edu.service.SanPhamEntityManager;
 import duytan.edu.service.ThuongHieuEntityManager;
 
+@Controller
 public class Admin {
 	@Autowired
 	KhachHangEntityManager khachHangEntityManager;
@@ -29,15 +31,22 @@ public class Admin {
 	@RequestMapping(value="/admin")
 	public String admin(){
 		
-	return "login";
+	return "admin";
 	}
-	@RequestMapping(value="/danhsach")
+	@RequestMapping(value="/customer")
+	public String customer(){
+		return "customer";
+	}@RequestMapping(value="/orderpage")
+	public String oderpage(){
+		return "orderpage";
+	}
+	/*@RequestMapping(value="/danhsach")
 	public String danhsach(Model model){
 		List<KhachHangEntity> danhsach =khachHangEntityManager.getAll();
 		model.addAttribute("danhsach",danhsach);
 		return "danhsachKH";
 		
-	}
+	}*/
 	/*@RequestMapping(value="/delete")
 	public String deleteKH(@RequestParam int idkhachhang,Model model){
 		if(khachHangEntityManager.findId(idkhachhang)!=null){
