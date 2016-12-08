@@ -26,5 +26,9 @@ public class HoaDonEntityManagerImpl implements HoaDonEntityManager{
 	public List<HoadonEntity> findByUserEntityUsername(String username) {
 		return entityRepository.findByUserEntityUsername(username);
 	}
+	@Override
+	public void delete(String id) {
+		entityRepository.delete(id);
+	}
 
 }

@@ -13,7 +13,7 @@
 					</div>
 					<br>
 					<hr>
-					<form action="saveuser" method="post">
+					<form action="register" method="post">
 
 						<div class="username">
 							<input type="text" id="username" name="username"

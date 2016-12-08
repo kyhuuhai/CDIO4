@@ -31,5 +31,21 @@ public class SanPhamEntityManagerImpl implements SanPhamEntityManager{
 		// TODO Auto-generated method stub
 		return entityRepository.findByNameContaining(name);
 	}
+
+	@Override
+	public void delete(String id) {
+		entityRepository.delete(id);
+	}
+
+	@Override
+	public SanPhamEntity save(SanPhamEntity sanpham) {
+		if(sanpham == null){
+			return null;
+		}
+		entityRepository.save(sanpham);
+		return sanpham;
+	}
+	
+	
 	
 }

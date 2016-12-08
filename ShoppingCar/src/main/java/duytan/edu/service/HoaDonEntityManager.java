@@ -8,4 +8,5 @@ public interface HoaDonEntityManager {
 	List<HoadonEntity> getAll();
 	HoadonEntity save(HoadonEntity entity);
 	List<HoadonEntity> findByUserEntityUsername(String username);
+	void delete(String id);
 }
