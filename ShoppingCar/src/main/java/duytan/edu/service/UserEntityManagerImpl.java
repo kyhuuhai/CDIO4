@@ -18,7 +18,7 @@ public class UserEntityManagerImpl implements UserEntityManager{
 	UserEntityRepository userRepository;
 	
 	@Autowired
-    private RoleEntityRepository roleRepository;
+    RoleEntityRepository roleRepository;
 
 	@Override
 	public void saveUser(UserEntity user) {

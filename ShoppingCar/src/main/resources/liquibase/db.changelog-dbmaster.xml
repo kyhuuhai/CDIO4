@@ -11,15 +11,6 @@
 <!-- 	 <include file="db.changelog.dbmaster-3.0.xml" relativeToChangelogFile="true"/> -->
 
 
-	<include file="db.changelog.dbmaster-1.0.xml"
-		relativeToChangelogFile="true" />
-	<include file="db.changelog.dbmaster-2.0.xml"
-		relativeToChangelogFile="true" />
-	<include file="db.changelog.dbmaster-3.0.xml"
-		relativeToChangelogFile="true" />
-	<include file="db.changelog.dbmaster-3.1.xml"
-		relativeToChangelogFile="true" />
-		<include file="db.changelog.dbmaster-3.2.xml"
-		relativeToChangelogFile="true" />
+	
 
 </databaseChangeLog>

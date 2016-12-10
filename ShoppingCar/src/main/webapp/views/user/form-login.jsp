@@ -20,8 +20,8 @@
 					<form
 						action="<%=request.getContextPath()%>/j_spring_security_check"
 						method="post">
-						<input type='text' name='username' value=''> 
-						<input type="password" name="password" placeholder="Password">
+						<input type='text' name='username' value='' placeholder="username" minlength="6" maxlength="50" size="50" required="required"> 
+						<input type="password" name="password" placeholder="Password" minlength="6" maxlength="50" size="50" required="required">
 
 						<div class="row">
 							<div class="col-md-6">
@@ -34,17 +34,19 @@
 							</div>
 						</div>
 
+						<!-- <div class="login"> -->
 						<input type="submit" value="Login">
+						<!-- </div> -->
 					</form>
 
 		<br/>
-		  <%-- <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+		  <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
 		    <div class=" " style="color: red;">
 		          <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>
 		
 		      <c:remove var = "SPRING_SECURITY_LAST_EXCEPTION" scope = "session" />
 		    </div>
-		  </c:if> --%>
+		  </c:if>
 					<div class="logo">
 						<div class="row">
 							<div class="col-md-6">
