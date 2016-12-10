@@ -137,7 +137,7 @@
                     <p><br/></p>
                    <div class="list-product">
 				<c:forEach var="sp" items="${sanpham }" varStatus="status">
-             <div class="col-sm-3">
+             <div class="col-sm-4">
             		<div class="product-box">
                         <img src="<%=request.getContextPath() %>/resource/images/bike.jpg">
                         <div class="product-detail">

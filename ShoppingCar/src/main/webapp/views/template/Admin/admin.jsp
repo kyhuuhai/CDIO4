@@ -15,11 +15,11 @@
     <title>Admin Page</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
-     <link href="resource/stylecss/morris.css" rel="stylesheet">
-	<link href="resource/stylecss/css.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/resource/css/bootstrap.min.css" rel="stylesheet">
+     <link href="${pageContext.request.contextPath }/resource/stylecss/morris.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/resource/stylecss/css.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="resource/stylecss/sb-admin.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/resource/stylecss/sb-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 <tiles:insertAttribute name="navbar"></tiles:insertAttribute>
 </div>
 </body>
-<script src="resource/jquerry/jquery-3.1.1.js"></script>
-	<script src="resource/jquerry/jquery-3.1.1.min.js"></script>
-	<script src="resource/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath }/resource/jquerry/jquery-3.1.1.js"></script>
+	<script src="${pageContext.request.contextPath }/resource/jquerry/jquery-3.1.1.min.js"></script>
+	<script src="${pageContext.request.contextPath }/resource/js/bootstrap.min.js"></script>
 </html>

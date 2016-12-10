@@ -83,7 +83,7 @@ public class HomeController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	@RequestMapping( method = RequestMethod.GET)
 	public ModelAndView index( ModelAndView model) {
 		model.setViewName("index");
 		return model;

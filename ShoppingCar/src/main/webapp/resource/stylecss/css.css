@@ -347,12 +347,7 @@ color: #B4B1AB;
   color: #B4B1AB;
 }
 .product-box{
-  /*   border: 2px solid #F7F7F0;
-    position: relative;
-    padding: 5px;
-    overflow: hidden;
-    margin: 5px;
-    background: white; */
+
     float: left;
     height: 268px;
     background: #fff;
@@ -361,6 +356,7 @@ color: #B4B1AB;
     text-align: center;
     overflow: hidden;
     position: relative;
+    padding: 20px;
 }
 .product-box img{
     margin: 50px;
