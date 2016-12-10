@@ -26,26 +26,25 @@
                                     <tr>
                                         <th>MÃ KHÁCH HÀNG</th>
                                         <th>TÊN KHÁCH HÀNG</th>
-                                        <th>SỐ ĐIỆN THOẠI</th>
-                                        <th>ĐỊA CHỈ</th>
                                         <th>EMAIL</th>
+                                        <th>SDT</th>
                                         <th>DELETE/UPDATE</th>
                                     </tr>
                                 </thead>
-                                <c:forEach var="customer" items="${listcust }">
+                                <c:forEach var="customer" items="${customer }">
                                 <tbody>
                                     <tr>
-                                        <td>${customer.idcustomer }</td>
+                                        <td>${customer.id }</td>
                                         <td>${ customer.name}</td>
-                                        <td>${ customer.phonenumber}</td>
-                                        <td>${ customer.streetname}</td>
                                         <td>${ customer.email}</td>
+                                        <td>${ customer.sdt}</td>
+                                        
                                         <td>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/deletecust?idcustomer=${customer.idcustomer}"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/deletecust?id=${customer.id}"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
                                         	</div>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/editcustomer?idcustomer=${customer.idcustomer}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/editcustomer?id=${customer.id}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
                                         	</div>
                                         </td>
                                     </tr>

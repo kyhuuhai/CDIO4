@@ -22,9 +22,22 @@
 	<definition name="customer" extends="definition1">
 		<put-attribute name="body" value="/views/admin/customer.jsp" />
 	</definition>
+	<definition name="editcustomer" extends="definition1">
+		<put-attribute name="body" value="/views/admin/editcustomer.jsp" />
+	</definition>
+	<definition name="editproduct" extends="definition1">
+		<put-attribute name="body" value="/views/admin/editproduct.jsp" />
+	</definition>
+		<definition name="listproduct" extends="definition1">
+		<put-attribute name="body" value="/views/admin/listproduct.jsp" />
+	</definition>
+	<definition name="addnewproduct" extends="definition1">
+		<put-attribute name="body" value="/views/admin/addnewproduct.jsp" />
+	</definition>
 	<definition name="orderpage" extends="definition1">
 		<put-attribute name="body" value="/views/admin/orderpage.jsp" />
 	</definition>
+	
 	<definition name="home" extends="definition">
 		<put-attribute name="body" value="/views/user/home.jsp" />
 	</definition>

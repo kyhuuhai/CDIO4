@@ -36,16 +36,16 @@
                                 <tbody>
                                     <tr>
                                         <td><img alt="" src="${pageContext.request.contextPath }/resource/img/${product.image}" style="width:100px"></td>
-                                        <td>${ product.name}</td>
-                                        <td>${ product.price}</td>
-                                        <td>${product.status}</td>
+                                        <td>${product.name}</td>
+                                        <td>${product.dongiasp}</td>
+                                        <td>${product.description}</td>
                                         
                                         <td>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/deleteproduct?idproduct=${product.idproduct }"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/deleteproduct?id=${product.id }"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
                                         	</div>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/editproduct?idproduct=${product.idproduct}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/editProduct?id=${product.id}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
                                         	</div>
                                         </td>
                                     </tr>

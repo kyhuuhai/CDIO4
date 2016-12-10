@@ -11,4 +11,5 @@ public interface SanPhamEntityManager {
 	public List<SanPhamEntity> findByName(String name);
 	public void delete(String id);
 	public SanPhamEntity save(SanPhamEntity sanpham);
+	SanPhamEntity update(SanPhamEntity product);
 }

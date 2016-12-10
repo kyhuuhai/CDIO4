@@ -57,59 +57,14 @@
                              <form:input type="text" class="form-control"  path="image" placeholder="Nhập tên ảnh"/>
 						</div>
 						    </spring:bind>
-							 <spring:bind path="price">
+							 <spring:bind path="dongiasp">
 						 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <label for="usr">ĐƠN GIÁ:</label>
-                     <form:errors path="price"></form:errors>
-                             <form:input type="text" class="form-control"  path="price" placeholder="Nhập đơn giá"/>
+                     <form:errors path="dongiasp"></form:errors>
+                             <form:input type="text" class="form-control"  path="dongiasp" placeholder="Nhập đơn giá"/>
 						</div>
 						    </spring:bind>
-						<div class="form-group">
-                    <label for="usr">LƯỢT XEM:</label>
-                             <form:input type="text" class="form-control"  path="view" />
-						</div>
-						<div class="form-group">
-                    <label for="usr">KHU VỰC:</label>
-                             <form:select path="locat.idlocation" class="selectpicker" style="
-   											 width: 100%;
-    										height: 30px;
-   												 border-radius: 5px;
-													">
-                             <c:forEach var="locat" items="${location }">
-                             	<form:option value="${locat.idlocation }">
-                             		<c:out value="${locat.name }"></c:out>
-                             	</form:option>
-                             	</c:forEach>
-                             </form:select>
-						</div>
-						<div class="form-group">
-                    <label for="usr">DANH MỤC:</label>
-                             <form:select path="category.idcategory" class="selectpicker" style="
-   											 width: 100%;
-    										height: 30px;
-   												 border-radius: 5px;
-													">
-                             <c:forEach var="category" items="${category }">
-                             	<form:option value="${category.idcategory }">
-                             		<c:out value="${category.name }"></c:out>
-                             	</form:option>
-                             	</c:forEach>
-                             </form:select>
-						</div>
-								<div class="form-group">
-                    <label for="usr">HÃNG SẢN XUẤT:</label>
-                             <form:select path="supplier.idsupplier" class="selectpicker" style="
-   											 width: 100%;
-    										height: 30px;
-   												 border-radius: 5px;
-													">
-                             <c:forEach var="supplier" items="${sup }">
-                             	<form:option value="${supplier.idsupplier }">
-                             		<c:out value="${supplier.name }"></c:out>
-                             	</form:option>
-                             	</c:forEach>
-                             </form:select>
-						</div>
+					
        <%--          <div class="panel panel-default">
                     <div class="panel-heading">
                         <i class="glyphicon glyphicon-user"><span>THÔNG SỐ KỸ THUẬT</span></i>

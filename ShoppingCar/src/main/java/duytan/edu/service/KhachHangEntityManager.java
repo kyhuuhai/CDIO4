@@ -11,4 +11,5 @@ public interface KhachHangEntityManager {
 	public void delete(String idkhachhang);
 	public KhachHangEntity findId(String idkhachhang);
 	KhachHangEntity findByUsername(String username);
+	KhachHangEntity update(KhachHangEntity khachHangEntity);
 }

@@ -45,6 +45,12 @@ public class SanPhamEntityManagerImpl implements SanPhamEntityManager{
 		entityRepository.save(sanpham);
 		return sanpham;
 	}
+
+	@Override
+	public SanPhamEntity update(SanPhamEntity product) {
+		// TODO Auto-generated method stub
+		return entityRepository.save(product);
+	}
 	
 	
 	

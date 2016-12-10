@@ -136,9 +136,6 @@
                         <a href="orderpage"><i class="fa fa-fw fa-table"></i>ĐƠN HÀNG</a>
                     </li>
                     <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i>BÁO CÁO</a>
-                    </li>
-                    <li>
                         <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> ĐĂNG XUẤT</a>
                     </li>
                 </ul>
