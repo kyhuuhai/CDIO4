@@ -1,4 +1,17 @@
-
+#logo {
+  float: left;
+  margin-left: 50px;
+  font-size: 27px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+ 
+}
+#logo:hover {
+    text-decoration: none;
+}
 ul li {
   list-style: none;
 }
@@ -8,7 +21,8 @@ ul li {
 .header_middle{
     padding-bottom: 25px;
     padding-top: 25px;	
-           border: 2px solid #F7F7F0;
+        
+    margin-left :450px
 }
 .header-middle .container .row {
   border-bottom: 1px solid #f5f5f5;

@@ -35,10 +35,6 @@
  
     </http>
 
-
-
-
-
 	<authentication-manager>
 		<authentication-provider user-service-ref="UserServiceImpl">
 			<password-encoder ref="encoder" />

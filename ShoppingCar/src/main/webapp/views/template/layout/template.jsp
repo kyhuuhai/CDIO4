@@ -14,6 +14,7 @@
 <link href="resource/css/bootstrap.min.css" rel="stylesheet">
 <link href="resource/css/prettyPhoto.css" rel="stylesheet">
 <link href="resource/css/responsive.css" rel="stylesheet">
+<link href="resource/css/main.css" rel="stylesheet">
 <link rel="stylesheet" href="resource/css/font-awesome.min.css">
 <link href="resource/css/css.css" rel="stylesheet">
 <script src="resource/js/main.js"></script>
