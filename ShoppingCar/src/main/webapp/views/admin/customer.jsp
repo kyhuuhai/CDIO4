@@ -28,6 +28,7 @@
                                         <th>TÊN KHÁCH HÀNG</th>
                                         <th>EMAIL</th>
                                         <th>SDT</th>
+                                         <th>Ngay Sinh</th>
                                         <th>DELETE/UPDATE</th>
                                     </tr>
                                 </thead>
@@ -38,6 +39,7 @@
                                         <td>${ customer.name}</td>
                                         <td>${ customer.email}</td>
                                         <td>${ customer.sdt}</td>
+                                        <td>${ customer.ngaysinh}</td>
                                         
                                         <td>
                                         	<div class="btn-group">

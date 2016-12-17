@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import duytan.edu.entity.KhachHangEntity;
 import duytan.edu.entity.SanPhamEntity;
+import duytan.edu.entity.ThuongHieuEntity;
 import duytan.edu.service.HoaDonEntityManager;
 import duytan.edu.service.KhachHangEntityManager;
 import duytan.edu.service.SanPhamEntityManager;
 import duytan.edu.service.ThuongHieuEntityManager;
 import duytan.edu.service.UserEntityManager;
+import jdk.nashorn.internal.ir.RuntimeNode.Request;
 
 @Controller
 public class Admin {
@@ -96,6 +98,7 @@ ThuongHieuEntityManager thuongHieuEntityManager;
 		sanPhamEntityManager.update(product);
 		return "redirect:/admin";
 	}
+	
 	@RequestMapping(value="/addproduct",method=RequestMethod.GET)
 	public String addproduct(Model model){
 		SanPhamEntity product= new SanPhamEntity();
@@ -114,11 +117,42 @@ ThuongHieuEntityManager thuongHieuEntityManager;
 		}
 		return "redirect:/admin";
 	}
-	@RequestMapping(value="getAllsupply")
+	
+	@RequestMapping(value="listsupply")
 	public String allsupply(Model model){
-		
-		return "";
+		List<ThuongHieuEntity> supplyGroup = thuongHieuEntityManager.getAllThuongHieu();
+		model.addAttribute("listSup", supplyGroup);
+		return "listsupply";
 	}
+	@RequestMapping(value="removeSupply")
+	public String deletesp(@RequestParam String id,Model model){
+		if(thuongHieuEntityManager.findById(id)!=null){
+			thuongHieuEntityManager.delete(id);
+		}
+		return "redirect:/listsupply";
+	}
+	@RequestMapping(value="/addsupply",method=RequestMethod.GET)
+	public String addSupply(Model model){
+		model.addAttribute("newsupply",new ThuongHieuEntity());
+		return "addsupply";
+	}
+	@RequestMapping(value="/addsupply",method=RequestMethod.POST)
+	public String addeSupply(@ModelAttribute("newsupply") ThuongHieuEntity thuonghieu){
+		thuongHieuEntityManager.save(thuonghieu);
+		return "redirect:/listsupply";
+	}
+	@RequestMapping(value="/editsupply",method=RequestMethod.GET)
+	public String editSupply(@RequestParam String id,Model model){
+		ThuongHieuEntity supply= thuongHieuEntityManager.findById(id);
+		model.addAttribute("supply", supply);
+		return "editsupply";
+	}
+	@RequestMapping(value="/editsupply",method=RequestMethod.POST)
+	public String editedSupply(@ModelAttribute("supply") ThuongHieuEntity thuonghieu){
+		thuongHieuEntityManager.update(thuonghieu);
+		return "redirect:/listsupply";
+	}
+	
 	
 
 }

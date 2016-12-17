@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin</a>
+                <a class="navbar-brand" href="admin.html">Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -127,14 +127,13 @@
                         <a href="admin"><i class="fa fa-fw fa-table"></i>SẢN PHẨM</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath }/getAllSupply"><i class="fa fa-fw fa-edit"></i> HÃNG SẢN XUẤT</a>
+                        <a href="listsupply"><i class="fa fa-fw fa-edit"></i> HÃNG SẢN XUẤT</a>
                     </li>
-                    <li>
-                        <a href="getAllCategory"><i class="fa fa-fw fa-table"></i>DANH MỤC</a>
-                    </li>
+                    
                     <li>
                         <a href="orderpage"><i class="fa fa-fw fa-table"></i>ĐƠN HÀNG</a>
                     </li>
+                    
                     <li>
                         <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> ĐĂNG XUẤT</a>
                     </li>

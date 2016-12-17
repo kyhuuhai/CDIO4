@@ -34,9 +34,9 @@
               		<form:form action="${pageContext.request.contextPath}/editsupply" commandName="supply" modelAttribute="supply" method="post">
               		<div class="add-product">
                     <div class="form-group">
-                    <form:label for="usr" path="idsupplier">ID</form:label>
-                         <form:input type="text" class="form-control" path="idsupplier" disabled="true" />
-                         <form:input path="idsupplier" type="hidden"/>
+                    <form:label for="usr" path="id">ID</form:label>
+                         <form:input type="text" class="form-control" path="id" disabled="true" />
+                         <form:input path="id" type="hidden"/>
                     </div>
                     <div class="form-group">
                     <label for="usr">TÊN HÃNG SẢN XUẤT:</label>

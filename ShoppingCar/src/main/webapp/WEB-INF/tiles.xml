@@ -37,6 +37,17 @@
 	<definition name="orderpage" extends="definition1">
 		<put-attribute name="body" value="/views/admin/orderpage.jsp" />
 	</definition>
+	<definition name="listsupply" extends="definition1">
+		<put-attribute name="body" value="/views/admin/listsupply.jsp" />
+		
+	</definition>
+	
+	<definition name="addsupply" extends="definition1">
+		<put-attribute name="body" value="/views/admin/addsupply.jsp" />
+	</definition>
+	<definition name="editsupply" extends="definition1">
+		<put-attribute name="body" value="/views/admin/editsupply.jsp" />
+	</definition>
 	
 	<definition name="home" extends="definition">
 		<put-attribute name="body" value="/views/user/home.jsp" />

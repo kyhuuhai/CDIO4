@@ -22,10 +22,9 @@
                                         <th>MÃ ĐƠN HÀNG</th>
                                         <th>TÊN KHÁCH HÀNG</th>
                                         <th>TÊN SẢN PHẨM</th>
-                                        <th>TỔNG TIỀN</th>
                                         <th>NGÀY ĐẶT HÀNG</th>
                                         <th>TRẠNG THÁI</th>
-                                        <th>NGÀY UPDATE</th>
+                                        <th>SO LUONG</th>
                                         <th></th>
                                     </tr>
                                 </thead>
