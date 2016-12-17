@@ -233,7 +233,7 @@ h2{
 	color: gray;
 }
 .menu-left li a{
-	border-bottom: 1px dotted gray;
+	border: 1px solid gray;
 }
 .detail{
     background: gray;

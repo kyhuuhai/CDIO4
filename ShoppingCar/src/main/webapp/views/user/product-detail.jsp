@@ -30,9 +30,9 @@
 					</div>
                 <div class="nav nav-stacked">
                 	<h1>${pdetail.name}</h1>
-             <div class="col-sm-3">
+             <div class="col-sm-6">
                        <div class="product-box">
-                         <img src="<%=request.getContextPath() %>/resource/images/bike.jpg" style="height: auto">                 
+                         <img src="<%=request.getContextPath() %>/resource/images/${pdetails.image}" style="height: auto">                 
                         </div>
                         </div>
                         <div class=col-sm-6>
@@ -55,6 +55,7 @@
                      </div>
                          </div>
                     </div>
+                    
                  <%--    <div class="nav nav-pills nav-stacked menu-left">
 					<h3>THÔNG SỐ KỸ THUẬT</h3>
 						<div class="table-responsive cart-infor">

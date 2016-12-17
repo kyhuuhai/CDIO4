@@ -30,7 +30,7 @@ public class LoginController {
 		
 		UserEntity userEntity=new UserEntity(username,password,new KhachHangEntity("bin", new Date(), "hahah@gmail.com", "0123123213"));
 		userManager.saveUser(userEntity);
-		return "redirect:/index";
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value="/login")

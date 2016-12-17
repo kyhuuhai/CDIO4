@@ -22,7 +22,7 @@ ul li {
     padding-bottom: 25px;
     padding-top: 25px;	
         
-    margin-left :450px
+    margin-left :500px;
 }
 .header-middle .container .row {
   border-bottom: 1px solid #f5f5f5;
@@ -57,7 +57,7 @@ h2{
     font-family: abel;
 }
 .menu-left{
-    border: 2px solid #F7F7F0;
+
     margin-bottom: 10px;
     padding-bottom: 20px;
 }

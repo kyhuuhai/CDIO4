@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-				<c:forEach var="event" items="${sanpham }">
+				<c:forEach var="event" items="${sanphamslide }">
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
@@ -17,37 +17,37 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>CAR</span>-MARKET</h1>
-									<h2>SS8</h2>
-									<p>Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. </p>
+									<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/images/ss7.jpg" class="girl img-responsive" alt="" />
+									<img src="resource/img/${event.image }" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-							<h1><span>Car</span>-MARKET</h1>
-									<h2>SS6</h2>
-									<p>Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. </p>
+							<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/images/ss7.jpg" class="girl img-responsive" alt="" />
+									<img src="resource/img/${event.image1 }" class="girl img-responsive" alt="" />
 									
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>Car</span>-MARKET</h1>
-									<h2>SS7</h2>
-									<p>No comfort do written conduct at prevent manners on. Celebrated contrasted discretion him sympathize her collecting occasional.</p>
+									<h1><span>PHONE</span>-MARKET</h1>
+									<h2>${event.name }</h2>
+									<p>${event.description }</p>
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/images/227.jpg" class="girl img-responsive" alt="" />
+									<img src="resource/img/${event.image2 }" class="girl img-responsive" alt="" />
 					
 								</div>
 							</div>

@@ -3,6 +3,7 @@ package duytan.edu.controller;
 import java.security.Principal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -68,6 +69,13 @@ public class HomeController {
 		model.addAttribute("danhmuc",loaispManager.getAllLoaiSP());
 		model.addAttribute("HangSanXuat",thuonghieuManager.getAllThuongHieu());
 		model.addAttribute("sanpham",sanphamManager.getAllSanPham());
+		model.addAttribute("sanphamslide",getSlide(sanphamManager.getAllSanPham()));
+	}
+	
+	private List<SanPhamEntity> getSlide(List<SanPhamEntity> list){
+		ArrayList<SanPhamEntity> a = new ArrayList<>();
+		 a.add(list.get(0));
+		 return a;
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public ModelAndView home(Locale locale, ModelAndView model) {

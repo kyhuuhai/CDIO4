@@ -32,7 +32,7 @@
 				<c:forEach var="sp" items="${sp }" varStatus="status">
              <div class="col-sm-3">
             		<div class="product-box">
-                        <img src="<%=request.getContextPath() %>/resource/images/4s.jpg">
+                        <img src="<%=request.getContextPath() %>/resource/images/${sp.image}">
                         <div class="product-detail">
                             <a href="${pageContext.request.contextPath }/detail?idsp=${sp.id}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>
@@ -47,7 +47,7 @@
                     </div>
                     </div>
                     <p><br/></p>
-                    <ul class="pagination" style="float:right">
+                    <!-- <ul class="pagination" style="float:right">
                         <li class="active">
                             <a href="#">1</a>
                         </li>
@@ -60,7 +60,7 @@
                         <li>
                             <a href="#">Trang Tiếp</a>
                         </li>
-                    </ul>
+                    </ul> -->
         </div>
         </div>
         </div>

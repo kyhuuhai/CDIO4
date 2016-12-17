@@ -24,7 +24,7 @@
 <body>
 	<header>
 		<tiles:insertAttribute name="header"></tiles:insertAttribute>
-		<tiles:insertAttribute name="slide"></tiles:insertAttribute>
+		
 	</header>
 	
 	<tiles:insertAttribute name="body"></tiles:insertAttribute>

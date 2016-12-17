@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-				<c:forEach var="event" items="${event }">
+				<c:forEach var="event" items="${sanphamslide }">
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
@@ -23,7 +23,7 @@
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/img/${event.image }" class="girl img-responsive" alt="" />
+									<img src="resource/images/${event.image }" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -34,7 +34,7 @@
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/img/${event.image1 }" class="girl img-responsive" alt="" />
+									<img src="resource/images/${event.image }" class="girl img-responsive" alt="" />
 									
 								</div>
 							</div>
@@ -47,7 +47,7 @@
 									<button type="button" class="btn btn-default get">Chi tiết</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="resource/img/${event.image2 }" class="girl img-responsive" alt="" />
+									<img src="resource/images/${event.image }" class="girl img-responsive" alt="" />
 					
 								</div>
 							</div>
@@ -139,7 +139,7 @@
 				<c:forEach var="sp" items="${sanpham }" varStatus="status">
              <div class="col-sm-4">
             		<div class="product-box">
-                        <img src="<%=request.getContextPath() %>/resource/images/bike.jpg">
+                        <img src="<%=request.getContextPath() %>/resource/images/${sp.image}">
                         <div class="product-detail">
                             <a href="${pageContext.request.contextPath }/detail?idsp=${sp.id}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>
@@ -171,12 +171,12 @@
 				<c:forEach var="phone" items="${newest }" varStatus="status">
              <div class="col-sm-3">
             		<div class="product-box">
-                        <img src="<%=request.getContextPath() %>/resource/img/${phone.image}">
+                        <img src="<%=request.getContextPath() %>/resource/images/${phone.image}">
                         <div class="product-detail">
                             <a href="${pageContext.request.contextPath }/detail?idproduct=${phone.idproduct}" class="btn btn-default detail">XEM CHI TIẾT</a>
                         </div>
                         <div class="product-new">
-                        <img alt="new" class="new" src="resource/img/new.png">
+                        <img alt="new" class="new" src="resource/images/new.png">
                         </div>
                       <h3>${phone.name}</h3>
                          <p>Giá:${phone.dongiasp }</p>
