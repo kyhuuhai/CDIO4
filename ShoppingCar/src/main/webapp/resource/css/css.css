@@ -15,9 +15,10 @@ ul li {
 .header_middle{
     padding-bottom: 25px;
     padding-top: 25px;	
+    margin-top: 70px;
 }
 .header-middle .container .row {
-  border-bottom: 1px solid #f5f5f5;
+  
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 20px;
@@ -232,7 +233,7 @@ h2{
 	color: gray;
 }
 .menu-left li a{
-	border-bottom: 1px dotted gray;
+	border: 1px solid gray;
 }
 .detail{
     background: gray;
@@ -279,12 +280,15 @@ color: #B4B1AB;
   color: #B4B1AB;
 }
 .product-box{
-    border: 2px solid #F7F7F0;
-    position: relative;
-    padding: 5px;
+    float: left;
+    height: 268px;
+    background: #fff;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: center;
     overflow: hidden;
-    margin: 5px;
-    background: white;
+    position: relative;
+    padding: 20px;
 }
 .product-box img{
     margin: 50px;

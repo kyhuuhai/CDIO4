@@ -4,20 +4,11 @@
           <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div id="header_top">
 			<div class="container">
+			<header class="navbar navbar-fixed-top navbar-inverse">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="contact-account">
-							<ul class="nav nav-pills">
-							<li class="email">
-								<a href="aloneguy13194@gmail.com"><i class="glyphicon glyphicon-envelope"></i><span>Aloneguy13194@gmail.com</span></a>
-							</li>
-							<li class="phone">
-								<a href="01665102292"><i class="glyphicon glyphicon-earphone"></i><span>01665102292</span></a>
-							</li>
-							<li class="Address">
-								<a href="Jfreedom"><i class="glyphicon glyphicon-home"><span>JfreedomCompany</span></i></a>
-							</li>
-							</ul>
+							<a href="${pageContext.request.contextPath }/" id="logo">Shopping Car</a>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -48,20 +39,17 @@
 						</div>
 					</div>
 				</div>
+				</header>
 			</div>
 			</div>
+			
 	<div class="header_middle">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="logo pull-left">
-							<a href="${pageContext.request.contextPath }/home"></a>
-						</div>
-					</div>
-					<div class="col-sm-6">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
             <div id="custom-search-input">
 			<form action="search" method="POST">
-                <div class="input-group col-md-12">
+		                <div class="input-group col-md-12">
                     <input type="text" class="form-control input-lg" name="name" id="name" style="    font-family: -webkit-pictograph;"/>
                     <span class="input-group-btn  search-button">
                         <button  class="btn btn-info search-button btn-lg" type="submit">

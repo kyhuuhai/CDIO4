@@ -28,7 +28,7 @@
                                         <th>DELETE/UPDATE</th>
                                     </tr>
                                 </thead>
-                                <c:forEach var="supply" items="${listSup }">
+                                <c:forEach var="supply" items="${listSup}">
                                 <tbody>
                                     <tr>
                                         
@@ -36,10 +36,10 @@
                                         
                                         <td>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/removeSupply?idsupplier=${supply.idsupplier }"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/removeSupply?id=${supply.id }"><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i>Xóa</button></a>
                                         	</div>
                                         	<div class="btn-group">
-                                        	<a href="${pageContext.request.contextPath }/editsupply?idsupply=${supply.idsupplier}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
+                                        	<a href="${pageContext.request.contextPath }/editsupply?id=${supply.id}"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-wrench"></i>Sửa</button></a>
                                         	</div>
                                         </td>
                                     </tr>
